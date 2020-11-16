@@ -1,0 +1,106 @@
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+}
+div {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.wrapper {
+	height: 1080px;
+	width: 1920px;
+	margin: auto;
+	background: #040414;
+	overflow: hidden !important;
+	
+}
+.background {
+	height: 1080px;
+	width: 1920px;
+	background-image: url("img/back2.jpg");
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+}
+
+.rocks_1 {
+	position: absolute;
+	bottom: 150px;
+	height: 315px;
+	width: 1920px;
+	background-image: url("img/rocks8.png");
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 100s infinite linear both;
+}
+.rocks_2 {
+	position: absolute;
+	bottom: 120px;
+	height: 315px;
+	width: 1920px;
+	background-image: url("img/rocks7.png");
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 30s infinite linear both;
+}
+.rails {
+	position: absolute;
+	bottom: -80px;
+	height: 315px;
+	width: 1920px;
+	background-image: url("img/rails4.png");
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 5s infinite linear both;
+}
+.train {
+	position: absolute;
+	bottom: -55px;
+	height: 315px;
+	width: 1500px;
+	right: 0px;
+	background-image: url("img/train9.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+}
+.ground {
+  position: absolute;
+  width: 1920px;
+  height: 50px;
+  bottom: 0px;
+  background: #040414;
+}
+.lights {
+	position: absolute;
+	bottom: 8px;
+	height: 315px;
+	width: 1920px;
+	background-image: url("img/lights2.png");
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-size: contain;
+	animation: translateX 4s infinite linear both;
+}
+.moon {	
+	position: absolute;
+	top: 10%;
+	height: 80px;
+	left: 200px;
+	width: 80px;
+	background-image: url("img/moon3.png");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: contain;
+}
+
+@keyframes translateX {
+	0% {background-position: 0px 0px;}
+	100% {background-position:  1920px 0px;}
+}
+
+
