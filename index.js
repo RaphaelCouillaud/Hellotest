@@ -1,4 +1,4 @@
-const title = document.getElementById('');
+/*const title = document.getElementById('');
 const text = "L'agence web unipersonnelle";
 
 let index = 0;
@@ -20,4 +20,12 @@ const play = () => {
 	timer = setInterval(play, randomSpeed(50, 200));
 };
 
-let timer = setInterval(play, 200);
+let timer = setInterval(play, 200);*/
+
+function parallax() {
+const paral = document.getElementById("pp");	
+	paral.style.top = -(window.pageYOffset / 8) + "px";
+		console.log(window.pageYOffset);
+};
+
+

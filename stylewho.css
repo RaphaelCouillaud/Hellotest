@@ -1,0 +1,545 @@
+@font-face {
+    font-family: 'MrRobot';
+    src : url('MrRobot.eot') format('eot'),
+          url('MrRobot.woff') format('woff'),
+          url('MrRobot.ttf') format('ttf'),
+          url('MrRobot.svg') format('svg');
+}
+@font-face {
+    font-family: 'PressStart';
+    src : url('PressStart.eot') format('eot'),
+          url('PressStart.woff') format('woff'),
+          url('PressStart.ttf') format('ttf'),
+          url('PressStart.svg') format('svg');
+}
+@font-face {
+    font-family: 'P22 Pop Art Comic Bold Italic';
+    src : url('P22 Pop Art Comic Bold Italic.eot') format('eot'),
+          url('P22 Pop Art Comic Bold Italic.woff') format('woff'),
+          url('P22 Pop Art Comic Bold Italic.ttf') format('ttf'),
+          url('P22 Pop Art Comic Bold Italic.svg') format('svg');
+}
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;	
+	font-family: Helvetica, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+a {
+	text-decoration: none;
+}
+header {	
+	display: flex;
+	flex-direction: column;	
+	background: linear-gradient(180deg, transparent 15%, white 100%),
+    url("img/cover2.jpg");	
+    background-size: cover; 
+}
+#logo {	
+	
+	display: flex;		
+	margin: auto;
+}
+#back {
+	width: 71%;
+	margin: auto;	
+	display: flex;
+	margin-top: 133px; 
+	/*box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .4);*/
+}
+
+/*-----------------------------NAVBAR---------------------------------*/
+
+nav, #navleft, #navcenter, #navright {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+nav {
+	margin-top: 45px;
+	margin-bottom: 50px;	
+}
+nav i {
+	color: white;
+	font-size: 60px;
+	margin: auto;
+}
+#navcenter span {
+	font-size: 50px;
+	background: #bc040c;
+	color: white;
+	margin-bottom: 0;
+	font-weight: bolder;
+	margin-left: 2px;
+}
+#navleft, #navright {
+	width: 470px;
+	height: 90px;
+	margin: auto;
+	justify-content: space-around;
+	align-items: center;	
+}
+#navcenter {
+	width: 166px;
+	margin: auto;
+	justify-content: space-around;
+	margin-top: 58px;
+	background: #100c0c;
+}
+#navleft, #navright {	
+	background: #100c0c;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .3);
+}
+.circles {
+	background: #bfd70e;
+  	border-radius: 50%;
+  	width: 62px;
+  	height: 62px;  
+  	position: relative;
+  	display: flex;
+  	justify-content: space-between;
+  	margin: 10px;
+}
+.circles span {
+	position: absolute;
+	top: 4px;
+	left: 12px;
+	font-size: 44px;
+	color: white;
+	font-weight: bolder;
+}
+#navright .circles span {
+	position: absolute;
+	top: 4px;
+	left: 15px;
+	font-size: 44px;
+	color: white;
+	font-weight: bolder;
+}
+.circles:nth-child(1) {
+	background-color: #9c3c94;
+}
+.circles:nth-child(2) {
+	background-color: #f48424;
+}
+.circles:nth-child(3) {
+	background-color: #bc040c;
+}
+.circles:nth-child(4) {
+	background-color: #046cc4;
+}
+.circles:nth-child(5) {
+	background-color: #fcd41c;
+}
+.circles:nth-child(6) {
+	background-color: #049c54;
+}
+
+/*-----------------------------DEFILEMENT---------------------------------*/
+
+h1 {
+	margin: auto;	
+	padding: 12px;
+	color: #fcfc04;
+	font-family: 'Press Start 2P', cursive;
+  	opacity: 0.75;
+  	font-size: 26px;
+  	vertical-align: middle;
+}
+.defilement {
+	display: flex; 
+	flex-direction: row;
+	position: sticky;
+
+}
+.defilement i {
+	margin-top: 50px;
+	font-size: 6em;
+	margin-left: -2px;
+	margin-right: -2px;
+	text-shadow: 1px 10px 4px rgba(0, 0, 0, .5);
+
+}
+/* le block conteneur */
+.marquee {
+  width: 40%;      /* largeur de la fenêtre */ 
+  margin-top: 60px;
+  height: 52px;  
+  overflow: hidden;  /* masque tout ce qui dépasse */
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .5), inset 0 0 1em .25em black;
+  background-image: url("img/board1.jpg");
+  background-size: cover;
+  border: 15px solid #100c0c;
+}
+/* le bloc défilant Le bloc défilant doit être un modèle de boîte en ligne n'autorisant 
+pas le renvoi à la ligne et être placé à droite du conteneur.
+L'animation proprement dite est définie en utilisant la propriété animation.*/
+.marquee > :first-child {
+  display: inline-block;             /* modèle de boîte en ligne */
+  padding-right: 2em;                   /* un peu d'espace pour la transition */
+  padding-left: 100%;                   /* placement à droite du conteneur */
+  white-space: nowrap;                  /* pas de passage à la ligne */
+  animation: defilement 12s infinite linear;
+  animation-timing-function: cubic-bezier(0.25, 0.5, 0.8, 0.5);
+}
+@keyframes defilement {
+  0% {
+    transform: translate3d(20px,0,0);      /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-100%,0,0);  /* position finale à gauche */
+  }
+}
+
+
+
+
+
+/*-------------------------------------SECTION BIO-----------------------------------*/
+
+section {	
+	border: 3px solid red;
+	display: flex;
+	flex-direction: column;	
+
+}
+#section1, #section2, #section3, #section4 {
+	display: flex;	
+	flex-direction: row;
+	justify-content: space-around;
+	height: 500px;
+	
+	
+	
+
+}
+
+figure {	
+	position: relative;
+	width: 45%;	
+	
+	
+}
+figcaption {
+	font-family: 'P22 Pop Art Comic Bold Italic', cursive;
+  text-transform: uppercase;
+	font-size: 1.5em;	
+	font-style: italic;
+	background: white;
+	padding: 5px 15px 5px 10px;  
+	display: block;
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border: 2px solid black;
+  	border-width: 2px 2px 2px 3px;
+  	border-radius: 97% 1% 97% 1%/1% 97% 1% 97%;  	
+}
+
+figure i {	
+	position: absolute;	
+	display: block;	
+	top: 100px;
+	left: 60px;
+	font-size: 2.5em;
+	color: #DE3A17;
+	text-shadow: 1px 4px 0px black;	
+	
+}
+figure img {	
+	margin: 0;
+	width: 100%;
+	padding: 0px 0 0 0;	
+	position: absolute;
+	overflow: hidden;
+	border: 2px solid black;
+  	border-width: 4px 5px 4px 6px;
+  	border-radius:99% 1% 99% 1%/1% 99% 1% 99%;
+  	background: url("img/backoyster3.jpg"); /*jpg*/    
+  	animation: clouds_animation 25s infinite ease-in-out;
+}
+
+@keyframes clouds_animation {
+  
+  0%  {background-position: 0 60%;}
+  
+  20%  {background-position: 0 45%;}
+  
+  40%  {background-position: 0 60%;}
+ 
+  60%  {background-position: 0 35%;}
+ 
+  80%  {background-position: 0 60%;}
+ 
+  100%  {background-position: 0 40%;} 
+
+}
+
+#balle {
+	color: white;
+	position: absolute;	
+	top: 100px;
+	left: 380px;
+	font-size: 1.2em;
+	animation: bounce 0.5s infinite linear;
+	text-shadow: 1px 1px 0px black;
+	
+    }
+    @keyframes bounce {
+    	0% {
+    	-webkit-transform: rotate(0deg);
+	    transform: rotate(0deg);
+	    transform: translateX(0);
+  	}
+   		25%  { 
+   			transform: translateY(-5px);
+   		}
+        50% { 
+        	transform: translateX(-5px);
+        }
+        75% {
+        	transform: translateY(5px);
+        }
+        
+  		100% {
+		  	-webkit-transform: rotate(360deg);
+		    transform: rotate(360deg); 
+		    transform: translateX(5px);
+		}        
+  }
+#compta img {  
+  margin: 0;
+  width: 100%;
+  padding: 0px 0 0 0; 
+  position: absolute;
+  overflow: hidden;
+  border: 2px solid black;
+    border-width: 4px 5px 4px 6px;
+    border-radius:99% 1% 99% 1%/1% 99% 1% 99%;
+    background: url("img/comptaback.jpg");
+    background-size: cover;
+    animation: compta_animation 75s linear infinite;
+}
+
+@keyframes compta_animation {
+  
+  0%  {background-position: 0 0;}
+  100%  {background-position: -2122px 0;} 
+
+}
+
+/*-------------------------------------SECTION SKILLS-----------------------------------*/
+     
+
+.skill-bars{
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  margin: auto;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 2s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 2s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.sens span{
+  width: 90%;
+}
+.bar .progress-line.relationnel span{
+  width: 60%;
+}
+.bar .progress-line.adapt span{
+  width: 85%;
+}
+.bar .progress-line.curio span{
+  width: 50%;
+}
+.bar .progress-line.crea span{
+  width: 75%;
+}
+.bar .progress-line.force span{
+  width: 75%;
+}
+.bar .progress-line.veille span{
+  width: 75%;
+}
+.bar .progress-line.esprit span{
+  width: 75%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color:  #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -45px;
+  right: 0;
+  font-weight: 500;
+  /*background: #000;*/
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 30px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.sens span::after{
+  content: "👍";
+}
+.progress-line.relationnel span::after{
+  content: "🤗";
+}
+.progress-line.adapt span::after{
+  content: "🔌";
+}
+.progress-line.curio span::after{
+  content: "👁️";
+}
+.progress-line.crea span::after{
+  content: "🧠";
+}
+.progress-line.force span::after{
+  content: "💪";
+}
+.progress-line.veille span::after{
+  content: "💡";
+}
+.progress-line.esprit span::after{
+  content: "🎯";
+}
+
+/*-------------------------------------SECTION MINDMAP-----------------------------------*/
+#sectionmind {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+#niveau1, #niveau2, #niveau3 {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  flex-direction: column;
+  
+}
+#brain  {
+  width: 700px;
+  height: 700px;
+  background-size: contain;
+  background-image: url("img/brain2.jpg");
+}
+#brain:hover {
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background-image: url("img/brain1.jpg");
+  background-size: cover;
+}
+#niveau2 {
+  margin: auto;
+}
+#niveau2 i {
+  font-size: 5em;
+  color: red;
+}
+.associations {
+ 
+  height: 200px;
+}
+.associations ul {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  text-align:center;
+ }
+.associations li {
+ float:left;
+ margin:auto;
+ padding:0;
+ background-color:black;
+ }
+.associations li a {
+  display:block;
+  width:100px;
+  color:white;
+  text-decoration:none;
+  padding:5px;
+  pointer-events: none;
+ }
+ .associations li a:hover {
+ color:#FFD700;
+ }
+ .associations ul li ul {
+  display: none;
+ }
+ .associations ul li:hover ul {
+  display: block;
+ }
+ .associations li:hover ul li {
+  float: none;
+ }
+ .associations li ul {
+  position: absolute;
+ }
+
+
