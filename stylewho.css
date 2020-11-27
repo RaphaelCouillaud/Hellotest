@@ -411,9 +411,18 @@ figure img {
   width: 75%;
 }
 .bar .progress-line.esprit span{
-  width: 75%;
+  width: 85%;
 }
-.progress-line span::before{
+.bar .progress-line.depass span{
+  width: 125%;
+}
+.bar .progress-line.respect span{
+  width: 150%;
+}
+.bar .progress-line.humour span{
+  width: 20%;
+}
+/*.progress-line span::before{
   position: absolute;
   content: "";
   top: -10px;
@@ -426,7 +435,7 @@ figure img {
   border-top-color:  #000;
   opacity: 0;
   animation: showText2 0.5s 1.5s linear forwards;
-}
+}*/
 .progress-line span::after{
   position: absolute;
   top: -45px;
@@ -469,6 +478,15 @@ figure img {
 .progress-line.esprit span::after{
   content: "🎯";
 }
+.progress-line.depass span::after{
+  content: "🙄";
+}
+.progress-line.respect span::after{
+  content: "🤔";
+}
+.progress-line.humour span::after{
+  content: "😒";
+}
 
 /*-------------------------------------SECTION MINDMAP-----------------------------------*/
 #sectionmind {
@@ -476,12 +494,19 @@ figure img {
   flex-direction: row;
   margin: auto;
 }
+h2 {
+	
+	
+	text-align: center;
+	border: 3px solid red;
+	
+}
+
 #niveau1, #niveau2, #niveau3 {
   display: flex;
   justify-content: space-between; 
   width: 100%;
-  flex-direction: column;
-  
+  flex-direction: column;  
 }
 #brain  {
   width: 700px;
@@ -490,9 +515,9 @@ figure img {
   background-image: url("img/brain2.jpg");
 }
 #brain:hover {
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  background-image: url("img/brain1.jpg");
+  -webkit-transition: .6s ease-in-out;
+  transition: .6s ease-in-out;
+  background-image: url("img/brain3.jpg");
   background-size: cover;
 }
 #niveau2 {
@@ -502,35 +527,43 @@ figure img {
   font-size: 5em;
   color: red;
 }
-.associations {
- 
+.associations { 
   height: 200px;
+  margin-top: 50px;
+  margin: auto;
 }
 .associations ul {
-  margin:0;
-  padding:0;
-  list-style-type:none;
-  text-align:center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  
+
  }
 .associations li {
- float:left;
- margin:auto;
- padding:0;
- background-color:black;
+	float: left;
+	margin: auto;
+	padding: 0;
+		
+	border-radius: 50% 20% / 10% 40%;
+	font-size: 1.5em;
  }
 .associations li a {
-  display:block;
-  width:100px;
-  color:white;
-  text-decoration:none;
-  padding:5px;
-  pointer-events: none;
+  display: block;
+  width: 100px;
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  pointer-events: none;  
+
  }
  .associations li a:hover {
- color:#FFD700;
+ color: #FFD700;
  }
  .associations ul li ul {
   display: none;
+  border-radius: 50% 20% / 10% 40%;
+
  }
  .associations ul li:hover ul {
   display: block;

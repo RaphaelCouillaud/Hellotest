@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'MrRobot';
+    src : url('MrRobot.eot') format('eot'),
+          url('MrRobot.woff') format('woff'),
+          url('MrRobot.ttf') format('ttf'),
+          url('MrRobot.svg') format('svg');
+}
+@font-face {
+    font-family: 'PressStart';
+    src : url('PressStart.eot') format('eot'),
+          url('PressStart.woff') format('woff'),
+          url('PressStart.ttf') format('ttf'),
+          url('PressStart.svg') format('svg');
+}
+@font-face {
+    font-family: 'P22 Pop Art Comic Bold Italic';
+    src : url('P22 Pop Art Comic Bold Italic.eot') format('eot'),
+          url('P22 Pop Art Comic Bold Italic.woff') format('woff'),
+          url('P22 Pop Art Comic Bold Italic.ttf') format('ttf'),
+          url('P22 Pop Art Comic Bold Italic.svg') format('svg');
+}
+
+
+
+
+body {
+	margin: 0;
+	padding: 0;	
+	font-family: Helvetica, 'Trebuchet MS', Arial, Helvetica, sans-serif;
+}
+a {
+	text-decoration: none;
+}
+header {	
+	display: flex;
+	flex-direction: column;	
+	background: linear-gradient(180deg, transparent 15%, white 100%),
+    url("img/cover2.jpg");	
+    background-size: cover; 
+}
+#logo {	
+	
+	display: flex;		
+	margin: auto;
+}
+#back {
+	width: 71%;
+	margin: auto;	
+	display: flex;
+	margin-top: 133px; 
+	/*box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .4);*/
+}
+
+/*-----------------------------NAVBAR---------------------------------*/
+
+nav, #navleft, #navcenter, #navright {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+nav {
+	margin-top: 45px;
+	margin-bottom: 50px;	
+}
+nav i {
+	color: white;
+	font-size: 60px;
+	margin: auto;
+}
+#navcenter span {
+	font-size: 50px;
+	background: #bc040c;
+	color: white;
+	margin-bottom: 0;
+	font-weight: bolder;
+	margin-left: 2px;
+}
+#navleft, #navright {
+	width: 470px;
+	height: 90px;
+	margin: auto;
+	justify-content: space-around;
+	align-items: center;	
+}
+#navcenter {
+	width: 166px;
+	margin: auto;
+	justify-content: space-around;
+	margin-top: 58px;
+	background: #100c0c;
+}
+#navleft, #navright {	
+	background: #100c0c;
+	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .3);
+}
+.circles {
+	background: #bfd70e;
+  	border-radius: 50%;
+  	width: 62px;
+  	height: 62px;  
+  	position: relative;
+  	display: flex;
+  	justify-content: space-between;
+  	margin: 10px;
+}
+.circles span {
+	position: absolute;
+	top: 4px;
+	left: 12px;
+	font-size: 44px;
+	color: white;
+	font-weight: bolder;
+}
+#navright .circles span {
+	position: absolute;
+	top: 4px;
+	left: 15px;
+	font-size: 44px;
+	color: white;
+	font-weight: bolder;
+}
+.circles:nth-child(1) {
+	background-color: #9c3c94;
+}
+.circles:nth-child(2) {
+	background-color: #f48424;
+}
+.circles:nth-child(3) {
+	background-color: #bc040c;
+}
+.circles:nth-child(4) {
+	background-color: #046cc4;
+}
+.circles:nth-child(5) {
+	background-color: #fcd41c;
+}
+.circles:nth-child(6) {
+	background-color: #049c54;
+}
+
+/*-----------------------------DEFILEMENT---------------------------------*/
+
+h1 {
+	margin: auto;	
+	padding: 12px;
+	color: #fcfc04;
+	font-family: 'Press Start 2P', cursive;
+  	opacity: 0.75;
+  	font-size: 26px;
+  	vertical-align: middle;
+}
+.defilement {
+	display: flex; 
+	flex-direction: row;
+	position: sticky;
+
+}
+.defilement i {
+	margin-top: 50px;
+	font-size: 6em;
+	margin-left: -2px;
+	margin-right: -2px;
+	text-shadow: 1px 10px 4px rgba(0, 0, 0, .5);
+
+}
+/* le block conteneur */
+.marquee {
+  width: 40%;      /* largeur de la fenêtre */ 
+  margin-top: 60px;
+  height: 52px;  
+  overflow: hidden;  /* masque tout ce qui dépasse */
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .5), inset 0 0 1em .25em black;
+  background-image: url("img/board1.jpg");
+  background-size: cover;
+  border: 15px solid #100c0c;
+}
+/* le bloc défilant Le bloc défilant doit être un modèle de boîte en ligne n'autorisant 
+pas le renvoi à la ligne et être placé à droite du conteneur.
+L'animation proprement dite est définie en utilisant la propriété animation.*/
+.marquee > :first-child {
+  display: inline-block;             /* modèle de boîte en ligne */
+  padding-right: 2em;                   /* un peu d'espace pour la transition */
+  padding-left: 100%;                   /* placement à droite du conteneur */
+  white-space: nowrap;                  /* pas de passage à la ligne */
+  animation: defilement 12s infinite linear;
+  animation-timing-function: cubic-bezier(0.25, 0.5, 0.8, 0.5);
+}
+@keyframes defilement {
+  0% {
+    transform: translate3d(20px,0,0);      /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-100%,0,0);  /* position finale à gauche */
+  }
+}
+
+
+
+
+
+/*-------------------------------------SECTION BIO-----------------------------------*/
+
+section {	
+	border: 3px solid red;
+	display: flex;
+	flex-direction: column;
+}
+
+/*-------------------------------------SECTION HOW SLIDER-----------------------------------*/
+
+
+
+.carousel {
+  max-width: 800px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.carousel-item {
+  display: none;
+  box-sizing: border-box;
+}
+.carousel-item:nth-child(1) {
+  color: #f06529;
+  background: black;
+}
+.carousel-item:nth-child(2) {
+  color: #2965f1;
+}
+.carousel-item:nth-child(3) {
+  color: #F0DB4F;
+  background: black;
+}
+.carousel-item:nth-child(4) {
+  color: #41B883;
+  background: #34495E;
+}
+.carousel-item:nth-child(5) {
+  color: #080135;
+  background: #602C50;
+}
+.carousel-item:nth-child(6) {
+  color: #cd6799;
+}
+.carousel-item:nth-child(9) {
+  color: #3C873A;
+  background: #303030;
+}
+.carousel-item:nth-child(13) {
+  color: #F1502F;
+  background: #3E2C00;
+}
+
+
+
+
+
+
+.carousel-item i {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  box-sizing: border-box;
+  font-size: 15em;
+  text-align: center;
+}
+.carousel-item img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  box-sizing: border-box;  
+}
+
+.carousel-item-visible {
+  display: block;
+  animation: fadedVisibility 0.5s;
+  box-sizing: border-box;
+}
+
+.carousel-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel-actions button {
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  font-size: 20px;
+  border: 2px solid white;
+  background-color: crimson;
+  color: #e0e0e0;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+
+.carousel-actions button:hover {
+  background-color: darkred;
+  box-sizing: border-box;
+}
+
+.carousel-actions #carousel-slide-nav {
+  align-self: flex-end;
+  box-sizing: border-box;
+}
+
+.carousel-actions #carousel-slide-nav span {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background: rgba(250, 250, 250, 0.625);
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+
+.carousel-actions #carousel-slide-nav span + span {
+  margin-left: 15px;
+  box-sizing: border-box;
+}
+
+.carousel-actions #carousel-slide-nav span.nav-current,
+.carousel-actions #carousel-slide-nav span.nav-current:hover {
+  background: crimson;
+  box-sizing: border-box;
+}
+
+.carousel-actions #carousel-slide-nav span:hover {
+  background: white;
+  box-sizing: border-box;
+}
+
+@keyframes fadedVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
