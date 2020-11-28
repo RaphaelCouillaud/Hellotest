@@ -492,7 +492,7 @@ figure img {
 #sectionmind {
   display: flex;
   flex-direction: row;
-  margin: auto;
+  
 }
 h2 {
 	
@@ -504,15 +504,26 @@ h2 {
 
 #niveau1, #niveau2, #niveau3 {
   display: flex;
-  justify-content: space-between; 
-  width: 100%;
-  flex-direction: column;  
+  justify-content: space-around; 
+  width: 100%; 
+  flex-direction: column; 
+
+ 
+ 
+}
+#niveau1 {
+  border: 3px solid red;
+
+}
+#niveau3 {
+  border: 3px solid red;
 }
 #brain  {
   width: 700px;
   height: 700px;
   background-size: contain;
   background-image: url("img/brain2.jpg");
+  position: relative;
 }
 #brain:hover {
   -webkit-transition: .6s ease-in-out;
@@ -521,13 +532,24 @@ h2 {
   background-size: cover;
 }
 #niveau2 {
-  margin: auto;
+  
 }
-#niveau2 i {
-  font-size: 5em;
+#brain p {
+ font-size: 2em;
   color: red;
+  position: absolute;
+  top: 150px;
+  left: 200px;
+  text-align: center;
 }
-.associations { 
+#brain i {
+ font-size: 3em;  
+}
+#brain p:hover, #brain i:hover {
+  opacity: 0;
+}
+
+/*.associations { 
   height: 200px;
   margin-top: 50px;
   margin: auto;
@@ -573,6 +595,113 @@ h2 {
  }
  .associations li ul {
   position: absolute;
- }
+ }*/
 
 
+
+
+
+.menu-button {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+  margin: auto;
+  width: 125px;
+  height: 125px;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+
+}
+.menu-button:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+
+.menu-button a {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+}
+.menu-button a:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.menu-button a:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #3cd4fc;
+}
+.menu-button a:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #fc046c;
+}
+.menu-button a:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #fcf404;
+}
+.menu-button:hover a {
+  opacity: 1;
+  width: 100px;
+  height: 100px;
+}
+.menu-button:hover a:nth-child(2) {
+  right: 120px;
+  bottom: -60px;
+}
+.menu-button:hover a:nth-child(2):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+
+}
+.menu-button:hover a:nth-child(3) {
+  right: 0px;
+  bottom: -120px;
+}
+.menu-button:hover a:nth-child(3):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+ 
+}
+.menu-button:hover a:nth-child(4) {
+  right: -120px;
+  bottom: -60px;
+}
+.menu-button:hover a:nth-child(4):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+ 
+}
