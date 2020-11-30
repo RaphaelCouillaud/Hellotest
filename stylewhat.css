@@ -126,9 +126,7 @@ nav i {
 
 }
 .circles:nth-child(1) {
-  background-color: #0a0b89;
-  border-radius: 10%;
-  border: 2px solid white;
+  background-color: #9c3c94;
 }
 .circles:nth-child(2) {
   background-color: #f48424;
@@ -144,6 +142,11 @@ nav i {
 }
 .circles:nth-child(6) {
   background-color: #049c54;
+}
+#spanwho {
+background-color: #0a0b89;
+  border-radius: 10%;
+  border: 2px solid white;
 }
 
 /*-----------------------------DEFILEMENT---------------------------------*/
@@ -242,14 +245,24 @@ section {
 }
 
 .titrechoix h4 {
-  font-size: 2.2em;   
+  font-size: 2.2em; 
+  color: #bc040c;
+   font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+   border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
+
+   width: 60%;
+   margin: auto;
+    
 }
+
 .detailchoix {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: auto;
    font-size: 1.25em;
+   margin-bottom: 25px;
+   margin-top: 25px;
 
 }
 .detailchoix i {
@@ -284,14 +297,15 @@ section {
 /*-------------------------------------SECTION TODO LIST-----------------------------------*/
 
 
-#todolist {
+#todolist, #refonte {
   width: 90%;
   display: flex;
   flex-direction: column;
   margin: auto;
   font-size: 1em; 
+  margin-top: 25px;
 }
-#todocontainer {
+#todocontainer, #refontecontainer {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -299,34 +313,54 @@ section {
   font-size: 1.4em;
  
 }
-#todoleft {
+#todoleft, #refonteleft {
   text-align: right;
    width: 50%;
-   border-right: 8px solid red;
+   border-right: 8px solid #f48424;
    position: relative; 
 }
-#todoleft i {
+#todoleft i, #refonteleft i {
    position: absolute;
-  right: -15px;
+  right: -16px;
 }
-#todoleft p {
+#todoleft p, #refonteleft p {
    margin-right: 25px;
 }
-#todoright p {
+#todoright p, #refonteright p {
    margin-left: 25px;
 }
-#todoright {
+#todoright, #refonteright {
    width: 50%;
    margin-top: 35px;
     position: relative;  
 }
-#todoright i {
+#todoright i, #refonteright i {
    position: absolute;
   left: -15px;
+}
+#toporefonte, #topolist {
+  margin: auto;
+}
+ 
+/*-------------------------------------SECTION REFERENCEMENT-----------------------------------*/
+#referencement, #securisation {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+#referencement i {
+  color: green;
+  margin-right: 10px;
+}
+#securisation i {
+  color: green;
+  margin-right: 10px;
 }
 /*-------------------------------------SECTION SECURITE-----------------------------------*/
 #secuimg img {
   width: 20%;
+  margin-top: 0;
 }
 #secuimg {
   display: flex;
@@ -334,22 +368,35 @@ section {
 }
 
 /*-------------------------------------SECTION COMPARAISON-----------------------------------*/
-
+#comparaison {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.2em;
+}
 #comparaison article {
   display: flex;
   flex-direction: row;
   text-align: center;
 }
 .comp {
-  width: 30%;
+  width: 40%;
   margin: auto;
+  
 }
 .comp h3 {
   font-size: 2.2em;
+  text-align: center;
+  width: 100%;
 }
 .comp h3 strong, #comparaison strong {
   font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   color: #bc040c;
+}
+#comparaison span i {
+  color: green;
+  margin-right: 10px;
+  font-size: 1.2em;
 }
 .fa-times {
   color: red;
@@ -365,6 +412,7 @@ section {
   height: 360px;  
   background-size: contain;
   background-image: url("img/ouix1.jpg");
+  margin: auto;
   
 }
 #imgouix:hover {
@@ -385,12 +433,17 @@ section {
   display: flex;
   flex-direction: column;
   margin: auto;
+  text-align: center;  
+  width: 80%;  
   text-align: center;
- 
+  font-size: 1.2em;
+  
 }
+
+
 #euroscontainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
 
 }
@@ -400,20 +453,46 @@ section {
   justify-content: space-around;
 }
 #london, #newyork, #tokyo {
-  width: 250px;
-  height: 300px;
-  color: red;
+  width: 300px;
+  height: 350px;
+  color: #bc040c;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+
+
+   
 }
 #newyork {
-   background-image: url("img/newyork.jpg");
+   background-image: url("img/subgrey.png");
+   
 }
 #london {
    background-image: url("img/tube.jpg");
+    
 }
 #tokyo {
    background-image: url("img/tokyo.jpg");
+}
+#villes p {  
+  font-size: 1.3em;
+  font-style: italic;
+ border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
+ 
+  vertical-align: middle;
+  margin: auto;
+  font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  
+}
+#devtarif p span {
+  font-size: 1.3em;
+   color: #bc040c;
+   font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+   font-style: italic;
+}
+#maintarif strong {
+  font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  color: #bc040c;
 }
 
 
@@ -451,7 +530,7 @@ input {
   outline: none;
 }
 input:focus {
-  border-color: #241424;
+  border-color: #bc040c;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
 }
 .form-group {
@@ -508,7 +587,7 @@ input {
   outline: none;
 }
 input:focus {
-  border-color: #241424;
+  border-color: #bc040c;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
 }
 .form-group {
@@ -540,7 +619,31 @@ input:focus {
   margin-top: 25px; 
 }
 
+/*-------------------------------NAV FOOTER-------------------------*/
+#navfooter span {
+  font-size: 50px;
+  background: #bc040c;
+  color: white;
+  margin-bottom: 0;
+  font-weight: bolder;
+  margin-left: 2px;
+}
 
+#navfooter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 180px;
+  margin: auto;
+  justify-content: space-around;
+  
+  background: #100c0c;
+}
+#navfooter i {
+  color: white;
+  font-size: 60px;
+  margin: auto;
+}
 
 /*-------------------------------FOOTER-------------------------*/
 footer {
@@ -555,7 +658,8 @@ footer {
 footer figure { 
   position: relative; 
   width: 100%;
-  margin: 0;  
+  margin: 0; 
+   border-top: 7px solid black; 
 }
 
 footer figure img {  
@@ -564,7 +668,7 @@ footer figure img {
   padding: 0px 0 0 0; 
   position: absolute;
   overflow: hidden;
-    background: url("img/seatsbackok.jpg");
+    background: url("img/seatsbackokok.jpg");
     background-size: cover;
     animation: compta_animation 25s linear infinite;
 }

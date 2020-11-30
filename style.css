@@ -118,9 +118,7 @@ nav i {
 
 }
 .circles:nth-child(1) {
-	background-color: #0a0b89;
-	border-radius: 10%;
-	border: 2px solid white;
+	background-color: #9c3c94;
 }
 .circles:nth-child(2) {
 	background-color: #f48424;
@@ -137,7 +135,11 @@ nav i {
 .circles:nth-child(6) {
 	background-color: #049c54;
 }
-
+#spanwho {
+background-color: #0a0b89;
+	border-radius: 10%;
+	border: 2px solid white;
+}
 /*-----------------------------DEFILEMENT---------------------------------*/
 
 h1 {
@@ -377,7 +379,7 @@ main {
 
 
 
-
+/*-------------------------------NAV FOOTER-------------------------*/
 #navfooter span {
 	font-size: 50px;
 	background: #bc040c;
@@ -417,6 +419,7 @@ footer figure {
 	position: relative;	
 	width: 100%;
 	margin: 0;	
+	 border-top: 7px solid black;
 }
 
 footer figure img {  
@@ -425,7 +428,7 @@ footer figure img {
   padding: 0px 0 0 0; 
   position: absolute;
   overflow: hidden;
-    background: url("img/seatsbackok.jpg");
+    background: url("img/seatsbackokok.jpg");
     background-size: cover;
     animation: compta_animation 25s linear infinite;
 }
