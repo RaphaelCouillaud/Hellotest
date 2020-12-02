@@ -69,10 +69,12 @@ nav i {
 }
 #navleft, #navright {
 	width: 470px;
-	height: 90px;
+	height: 100px;
 	margin: auto;
 	justify-content: space-around;
-	align-items: center;	
+	align-items: center;
+	background-image: url("img/nav1.jpg");
+	background-size: contain;
 }
 #navcenter {
 	width: 166px;
@@ -82,7 +84,7 @@ nav i {
 	background: #100c0c;
 }
 #navleft, #navright {	
-	background: #100c0c;
+	
 	box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .3);
 }
 .circles {
@@ -118,25 +120,25 @@ nav i {
 
 }
 .circles:nth-child(1) {
-	background-color: #9c3c94;
-}
-.circles:nth-child(2) {
-	background-color: #f48424;
-}
-.circles:nth-child(3) {
 	background-color: #bc040c;
 }
+.circles:nth-child(2) {
+	background-color: #2cbcc4;
+}
+.circles:nth-child(3) {
+	background-color: #9cd4d4;
+}
 .circles:nth-child(4) {
-	background-color: #046cc4;
+	background-color: #2cf4c4;
 }
 .circles:nth-child(5) {
-	background-color: #fcd41c;
+	background-color: #8c4c44;
 }
 .circles:nth-child(6) {
-	background-color: #049c54;
+	background-color: #bc040c;
 }
 #spanwho {
-background-color: #0a0b89;
+background-color: #141c2c;
 	border-radius: 10%;
 	border: 2px solid white;
 }
@@ -229,7 +231,7 @@ main {
 }
 
 #c {
-	background-color: #f48424;		
+	background-color: #2cbcc4;		
 }
 #d {
 	background-color: #bc040c;
@@ -277,7 +279,7 @@ main {
 	
 }
 #timelinec {
-	border-bottom: 5px solid #f48424;
+	border-bottom: 5px solid #2cbcc4;
 }
 #timelined {
 	border-bottom: 5px solid #bc040c;
@@ -407,19 +409,133 @@ main {
 
 /*-------------------------------FOOTER-------------------------*/
 footer {
-	
+	position: relative;
+
 }
-#contact {
-	
-	
-	background: red;
+#divcontact {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background-image: url("img/backfooter.jpg");
+	background-size: contain;
+	 border-top: 3px solid black;	
+}
+#adresse, #horaires {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: 3px solid red;
+	width: 35%;
+}
+/*-----------------------------DEFILEMENT FOOTER---------------------------------*/
+
+#defilfooter h1 {
+	margin: auto;	
+	padding: 12px;
+	color: #fcfc04;
+	font-family: 'Press Start 2P', cursive;
+  	opacity: 0.75;
+  	font-size: 20px;
+  	vertical-align: middle;
+  	text-shadow: 0px 0px 15px #fcfc04;
+  	text-transform: uppercase;
+}
+#defilfooter {
+	width: 25%;
+  margin: auto;
+  height: 40px;
+  overflow: hidden;  /* masque tout ce qui dépasse */
+  box-shadow: /*5px 5px 2px 1px rgba(0, 0, 0, .5),*/ inset 0 0 1em .25em black;
+  background-image: url("img/board1.jpg");
+  background-size: cover;
+  border: 10px solid #100c0c;
+}
+/* le bloc défilant Le bloc défilant doit être un modèle de boîte en ligne n'autorisant 
+pas le renvoi à la ligne et être placé à droite du conteneur.
+L'animation proprement dite est définie en utilisant la propriété animation.*/
+#defilfooter > :first-child {
+  display: inline-block;             /* modèle de boîte en ligne */
+  padding-right: 2em;                   /* un peu d'espace pour la transition */
+  padding-left: 100%;                   /* placement à droite du conteneur */
+  white-space: nowrap;                  /* pas de passage à la ligne */
+  animation: defilement 12s infinite linear;
+  animation-timing-function: cubic-bezier(0.25, 0.5, 0.8, 0.5);
+}
+@keyframes defilement {
+  0% {
+    transform: translate3d(20px,0,0);      /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-100%,0,0);  /* position finale à gauche */
+  }
+}
+
+/*-----------------------------FOOTER FIGURE---------------------------------*/
+#divfooter {
+	position: absolute;
+	width: 100%;
+	top: 255px;	
 	font-size: 5em;
+	display: flex;
+	justify-content: space-between;
 }
+#divfooterleft, #divfooterright {
+	display: flex;
+	justify-content: space-between;
+	
+	width: 20%;
+}
+#divfooterleft {
+	margin-left: 10%;
+}
+#divfooterright {
+	margin-right: 10%;
+}
+#divfooter i {
+	
+    padding:0 1px 0 2px;  
+    text-shadow: 5px 1px 10px rgba(0, 0, 0, .8);
+     animation: jump 2s infinite linear;     
+    }
+    @keyframes jump {
+    	0% {
+    	-webkit-transform: rotate(0deg);
+	    transform: rotate(0deg);
+	    transform: translateX(0);}
+   		25%  { 
+   			transform: translateY(-2px);}
+        50% { 
+        	transform: translateX(2px);}
+        75% {
+        	transform: translateY(-2px);}
+        
+  		100% {
+		  	-webkit-transform: rotate(360deg);
+		    transform: rotate(360deg); 
+		    transform: translateX(5px);}        
+  }
+
+#github {
+	color: black;
+}
+#linkedin {
+	color: #0e76a8;
+}
+#twitter {
+	color: #1DA1F2;
+}
+#slack {
+	color: #3F0F3F;
+}
+
+
+
+
 footer figure {	
 	position: relative;	
 	width: 100%;
 	margin: 0;	
-	 border-top: 7px solid black;
+	 border-top: 3px solid black;
 }
 
 footer figure img {  
@@ -430,12 +546,12 @@ footer figure img {
   overflow: hidden;
     background: url("img/seatsbackokok.jpg");
     background-size: cover;
-    animation: compta_animation 25s linear infinite;
+    animation: compta_animation 20s linear infinite;
 }
 
 @keyframes compta_animation {
+  0%  {background-position: -2122px 0;} 
+  100%  {background-position: 0 0;}
   
-  0%  {background-position: 0 0;}
-  100%  {background-position: -2122px 0;} 
-
 }
+
