@@ -350,15 +350,16 @@ main {
 	color: #100c0c;
 	background: white/*#d4d4d4*/;
 	opacity: 0.8;
-	font-size: 1.2em;
-	margin-top: 0;
+	font-size: 1em;
+	padding-top: 20px;
 	
-	
-
 }
+
+
 #toposite h2 {
 	margin-top: 0;
 	padding-top: 50px;
+
 }
 #toposite h3 {
 	
@@ -397,9 +398,10 @@ main {
 	flex-wrap: wrap;
 	width: 180px;
 	margin: auto;
-	justify-content: space-around;
-	
+	justify-content: space-around;	
 	background: #100c0c;
+	
+
 }
 #navfooter i {
 	color: white;
@@ -423,10 +425,34 @@ footer {
 #adresse, #horaires {
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
-	border: 3px solid red;
+	align-items: center;	
 	width: 35%;
 }
+#horaires p:nth-child(1), #horaires p:nth-child(4), #adresse p:nth-child(1), #adresse p:nth-child(4) {
+	font-size: 2em;
+
+}
+#horaires p, #adresse p {
+	margin: 0;
+	font-size: 1.25em;
+	max-height: 50px;
+}
+#horaires span, #adresse span {
+	  animation-duration: 0.01s;
+       animation-name: textflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+}
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+
 /*-----------------------------DEFILEMENT FOOTER---------------------------------*/
 
 #defilfooter h1 {
@@ -460,6 +486,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
   white-space: nowrap;                  /* pas de passage à la ligne */
   animation: defilement 12s infinite linear;
   animation-timing-function: cubic-bezier(0.25, 0.5, 0.8, 0.5);
+
 }
 @keyframes defilement {
   0% {
@@ -474,28 +501,28 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 #divfooter {
 	position: absolute;
 	width: 100%;
-	top: 255px;	
-	font-size: 5em;
+	top: 140px;	
+	font-size: 4.5em;
 	display: flex;
 	justify-content: space-between;
 }
 #divfooterleft, #divfooterright {
 	display: flex;
-	justify-content: space-between;
-	
-	width: 20%;
+	justify-content: space-between;	
+	width: 23%;
 }
 #divfooterleft {
-	margin-left: 10%;
+	margin-left: 8%;
+	
 }
 #divfooterright {
-	margin-right: 10%;
+	margin-right: 8.5%;
 }
 #divfooter i {
 	
     padding:0 1px 0 2px;  
-    text-shadow: 5px 1px 10px rgba(0, 0, 0, .8);
-     animation: jump 2s infinite linear;     
+    /*text-shadow: 5px 1px 10px rgba(0, 0, 0, .8);
+     /*animation: jump 2s infinite linear; */   
     }
     @keyframes jump {
     	0% {

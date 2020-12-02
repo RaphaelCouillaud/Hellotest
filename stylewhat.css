@@ -212,7 +212,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 /*-------------------------------------SECTION SITE-----------------------------------*/
 
-section {	
+#sectionwhat {	
 	display: flex;
 	flex-direction: column;
 }
@@ -234,11 +234,15 @@ section {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 80%;
+  width: 90%;
+ 
 }
 .listechoix {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+   margin: auto;
 }
 .titrechoix {
   text-align: center;
@@ -248,49 +252,40 @@ section {
   font-size: 2.2em; 
   color: #bc040c;
    font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-   border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
-
    width: 60%;
    margin: auto;
-    
 }
 
 .detailchoix {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: auto;
+  flex-direction: column;
    font-size: 1.25em;
-   margin-bottom: 25px;
-   margin-top: 25px;
+   margin: 25px;
+   border-radius: 30px;
+    background: #100c0c;
+    color: white;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+   vertical-align: middle;
+    
+   
+
 
 }
 .detailchoix i {
-    display: flex;
-    align-items: center;
-    color: #100c0c;
-    background-color: #d4d4d4;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    justify-content: space-around;
-    position: absolute;
-    z-index: 2;
-
+   padding: 10px 10px 0 10px;    
+    font-size: 2.8em;
 }
 .detailchoix p {
     display: flex;
-    align-items: center;
-    width: 100%;
-    height: 3rem;
-    padding: 0rem 0.9rem 0rem 3.125rem;
-    background-color: #ffffff;
-    border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
-    border: 0.19rem #F2F2F2 solid;
-    position: relative;
-    z-index: 1;
-    background: #100c0c;
-    color: #d4d4d4;
+   vertical-align: middle;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 0px 10px 0 10px; 
+    margin: auto;
+
+    
 
 }
 
