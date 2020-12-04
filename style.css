@@ -28,7 +28,7 @@ header {
 	flex-direction: column;	
 	background: linear-gradient(180deg, transparent 15%, white 100%),
     url("img/cover2.jpg");	
-    background-size: cover; 
+    background-size: cover;     
 }
 #logo {	
 	
@@ -142,6 +142,33 @@ background-color: #141c2c;
 	border-radius: 10%;
 	border: 2px solid white;
 }
+
+/*-------------------------------PARALLAX----------------------------------*/
+.pp {
+	background-image: url("img/traintrain1.png");
+	height: auto;
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+/*-----------------------TOPO SITE------------------------------*/
+
+#toposite {
+	width: 100%;
+	text-align: center;
+	color: black /*#100c0c*/;
+	
+	font-size: 1.1em;
+	padding-top: 40px;
+}
+#toposite h2 {
+	margin-top: 0;
+}
+#toposite p span {
+	font-size: 1.5em;
+}
 /*-----------------------------DEFILEMENT---------------------------------*/
 
 h1 {
@@ -161,17 +188,16 @@ h1 {
 
 }
 .defilement i {
-	margin-top: 50px;
+	margin-top: 30px;
 	font-size: 6em;
 	margin-left: -2px;
 	margin-right: -2px;
 	text-shadow: 1px 10px 4px rgba(0, 0, 0, .5);
-
 }
 /* le block conteneur */
 .marquee {
   width: 40%;      /* largeur de la fenêtre */ 
-  margin-top: 60px;
+  margin-top: 40px;
   height: 52px;  
   overflow: hidden;  /* masque tout ce qui dépasse */
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .5), inset 0 0 1em .25em black;
@@ -199,12 +225,12 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
   }
 }
 
-
 /*-------------------------------SECTION ----------------------------------*/
 
 main {	
 	background: url("img/subgrey.png");
-    background-size: cover;	    
+    background-size: contain;
+    background-repeat: repeat;	    
 }
 #creationweb, #devweb, #graphisme, #optimisation, #webmastering {
 	display: flex;
@@ -319,59 +345,265 @@ main {
   	font-size: 1.2em;
   	font-weight: bolder;
 }
-#sectionwhat, #sectionwho, #sectionreal, #sectionblog {
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	text-align: center;
-	font-size: 35px;
-}
-#sectionwhat img, #sectionwho img, #sectionreal img {
-	width: 35%;
+
+/*-------------------------------------SECTION TARIFS-----------------------------------*/
+#tarifs {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;  
+  width: 70%; 
+  font-size: 1.2em;
+  margin-top: 50px;
+
+  
 }
 
-/*-------------------------------PARALLAX----------------------------------*/
-
-.pp {
-	background-image: url("img/traintrain1.png");
-	height: auto;
-	background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/*-----------------------TOPO SITE------------------------------*/
-
-#toposite {
-	
-	
-	width: 100%;
-	text-align: center;
-	color: #100c0c;
-	background: white/*#d4d4d4*/;
+#euroscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #100c0c;
 	opacity: 0.8;
-	font-size: 1em;
-	padding-top: 20px;
-	
-}
-
-
-#toposite h2 {
-	margin-top: 0;
 	padding-top: 50px;
-
-}
-#toposite h3 {
+	 box-shadow: inset 0px 0px 0px 6px white;
+   border: 6px solid black;
+   border-radius: 30px;
 	
 }
+#euroscontainer h3 {
+	background-color: #fcfc04;
+	color: #100c0c;
+	width: 90%;
+	height: auto;
+	border-radius: 30px 30px 0 0;
+   box-shadow: 0px -10px 5px 2px black;
+   font-size: 2em; 
+   margin: auto;
+   padding: 12px 0 12px 0;
+  
 
-#toposite p {
-	padding-bottom: 50px;
 }
-#toposite p span {
-	font-size: 1.5em;
-	
+#villes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 25px;
+  
 }
+#devtarif, #maintarif {
+	margin-bottom: 50px;
+
+}
+#devcontenu {
+	border-radius: 30px;
+    background: #100c0c;
+    color: white;
+    width: 40%;
+    text-align: center;
+   vertical-align: middle;
+   box-shadow: inset 0px 0px 0px 6px white;
+   border: 6px solid #fcfc04;
+   opacity: 1;
+    margin: auto;
+    margin-top: 25px;
+    
+    font-size: 1em;
+}
+#devcontenu p {
+	padding: 0 10px 0 10px;
+}
+#devcontenu p:last-child {
+	font-style: italic;
+	font-size: 0.8em;
+}
+#devcontenu p:last-child span{
+	font-style: normal;
+}
+#london, #newyork, #tokyo {
+	border-radius: 30px;
+    background: #100c0c;
+    width: 275px;
+    height: 275px;
+    text-align: center;
+   vertical-align: middle;
+   box-shadow: inset 0px 0px 0px 6px white;
+   border: 6px solid #fcfc04;
+   opacity: 1;
+   display: flex;
+
+}
+#london {
+	background-image: url("img/london.png");
+	background-size: cover;
+}
+#newyork {
+	background-image: url("img/sub.png");
+	background-size: cover;
+}
+#tokyo {
+	background-image: url("img/tokyo.png");
+	background-size: cover;
+}
+
+#villes p {  
+  font-size: 1.3em;
+  font-style: italic; 
+  font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  color: white;
+   margin: auto;
+   line-height: 1.75em;
+}
+#devtarif p span {
+  font-size: 1.5em;
+   color: white;
+   font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+   font-style: italic;
+}
+#maintarif strong {
+  font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  color: #bc040c;
+}
+#reduc {
+	color: #100c0c;
+}
+#reduc span {
+	 font-size: 2em;
+}
+#reduc strong {
+	 font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  color: #bc040c;
+}
+
+
+/*------------------------------FORMULAIRE--------------------------*/
+.formulaire_commande, .recapitulatif {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+#commander {
+  font-size: 2em;
+}
+.fas:hover {
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  width: 30%; 
+  font-size: 1.2em;  
+  text-align: center;  
+}
+input {
+  width: 70%;
+  height: 3em;
+  box-sizing: border-box;  
+  outline: none;
+}
+input:focus {
+  border-color: #bc040c;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+}
+.form-group {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 15px;
+}
+.cadre {
+  margin: auto;
+  width: 50%; 
+}
+#name, #email {
+  width: 70%;
+  margin: auto;
+}
+#panier-recap, #confirmation-recap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;  
+  font-size: 1.5em;
+  font-weight: bolder;   
+}
+.recapitulatif h2 {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 0;
+  margin-top: 25px; 
+}/*--------formulaire-------*/
+.formulaire_commande, .recapitulatif {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+#commander {
+  font-size: 2em;
+}
+.fas:hover {
+  cursor: pointer;
+}
+
+label {
+  display: block;
+  width: 30%; 
+  font-size: 1.2em;  
+  text-align: center;  
+}
+input {
+  width: 70%;
+  height: 3em;
+  box-sizing: border-box;  
+  outline: none;
+}
+input:focus {
+  border-color: #bc040c;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
+}
+.form-group {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 15px;
+}
+.cadre {
+  margin: auto;
+  width: 50%; 
+}
+#name, #email {
+  width: 70%;
+  margin: auto;
+}
+#panier-recap, #confirmation-recap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;  
+  font-size: 1.5em;
+  font-weight: bolder;   
+}
+.recapitulatif h2 {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 0;
+  margin-top: 25px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -427,14 +659,29 @@ footer {
 	justify-content: space-around;
 	align-items: center;	
 	width: 35%;
+
+	
 }
-#horaires p:nth-child(1), #horaires p:nth-child(4), #adresse p:nth-child(1), #adresse p:nth-child(4) {
+#horaires p:nth-child(2), #adresse p:nth-child(2) {
+	background-image: url("img/board1.jpg");
+  background-size: cover;
+  border: 5px solid #100c0c;
+  padding: 3px;
+  color: #fcfc04;
+  font-family: 'Press Start 2P', cursive;
+
+  	
+}
+
+
+
+#horaires p:nth-child(1), #horaires p:nth-child(3), #adresse p:nth-child(1), #adresse p:nth-child(3) {
 	font-size: 2em;
 
 }
 #horaires p, #adresse p {
 	margin: 0;
-	font-size: 1.25em;
+	font-size: 0.75em;
 	max-height: 50px;
 }
 #horaires span, #adresse span {
@@ -446,6 +693,7 @@ footer {
 @keyframes textflicker {
   from {
     text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    text-shadow: 0px 0px 15px #fcfc04;
   }
   to {
     text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
