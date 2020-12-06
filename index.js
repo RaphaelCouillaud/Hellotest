@@ -86,3 +86,14 @@ nextButton.addEventListener("click", nextSlide);
 
 setInterval(nextSlide, 7500);
 
+
+
+
+
+
+
+
+
+
+
+

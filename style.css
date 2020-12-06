@@ -123,19 +123,19 @@ nav i {
 	background-color: #bc040c;
 }
 .circles:nth-child(2) {
-	background-color: #2cbcc4;
+	background-color: #f48424;
 }
 .circles:nth-child(3) {
-	background-color: #9cd4d4;
+	background-color: #9c3c94;
 }
 .circles:nth-child(4) {
-	background-color: #2cf4c4;
+	background-color: #fcf404;
 }
 .circles:nth-child(5) {
-	background-color: #8c4c44;
+	background-color: #046cc4;
 }
 .circles:nth-child(6) {
-	background-color: #bc040c;
+	background-color: #d4d4d4;
 }
 #spanwho {
 background-color: #141c2c;
@@ -254,10 +254,11 @@ main {
 	width: 80px;
   	height: 80px; 
   	margin-bottom: 0;
+
 }
 
 #c {
-	background-color: #2cbcc4;		
+	background-color: #f48424;		
 }
 #d {
 	background-color: #bc040c;
@@ -266,7 +267,7 @@ main {
 	background-color: #046cc4;
 }
 #g {
-	background-color: #fcd41c;
+	background-color: #9c3c94;
 }
 #w {
 	background-color: #049c54;
@@ -296,29 +297,82 @@ main {
 .listsection {
 	display: flex;
 	justify-content: space-between;	
+	flex-direction: column;
+
 }
 
 #timelinec, #timelined, #timelineo, #timelineg, #timelinew {	
 	display: flex;
 	margin-top: 50px;
 	height: 100px;
+	margin: auto;
+	margin-bottom: 0;
+
+}
+.timelineiconc, .timelineicond, .timelineicono, .timelineicong, .timelineiconw {
+	width: 100%;
+	margin: auto;
+	margin-top: 15px;
+	position: relative;
+
+}
+.timelineiconc {
+	border-top: 5px solid #f48424;
+}
+.timelineicond {
+	border-top: 5px solid #bc040c;
+}
+.timelineicono {
+	border-top: 5px solid #046cc4;
+}
+.timelineicong {
+	border-top: 5px solid #9c3c94;
+}
+.timelineiconw {
+	border-top: 5px solid #049c54;
+}
+#timelinec i {
+	color: #f48424; 
+}
+#timelined i {
+	color: #bc040c; 
+}
+#timelineo i {
+	color: #046cc4;
+}
+#timelineg i {
+	color: #9c3c94; 
+}
+#timelinew i {
+	color: #049c54;
+}
+.timelineiconc i, .timelineicono i, .timelineiconw i {	
+	text-shadow: 0px 0px 15px #fcfc04;
+}
+
+.timelineiconc i, .timelineicond i, .timelineicono i, .timelineicong i, .timelineiconw i {	
+	position: absolute;
+	bottom: 0px;
+	left: -10px;	
 	
+	font-size: 2.5em;
+	animation-duration: 15s;
+  animation-delay: 1s;
+  animation-name: gliss;
+  animation-iteration-count: infinite;
 }
-#timelinec {
-	border-bottom: 5px solid #2cbcc4;
+@keyframes gliss {
+  from {
+    margin-left: 0%;
+    width: 0%;
+  }
+  to {
+  margin-left: 100%;
+    width: 0%;
+  }
 }
-#timelined {
-	border-bottom: 5px solid #bc040c;
-}
-#timelineo {
-	border-bottom: 5px solid #046cc4;
-}
-#timelineg {
-	border-bottom: 5px solid #fcd41c;
-}
-#timelinew {
-	border-bottom: 5px solid #049c54;
-}
+
+
 
 .timelinelist {
 	display: flex;
@@ -326,15 +380,21 @@ main {
 	position: relative;
 	justify-content: space-between;	
 	text-align: center;
-
 }
+.timelinelist p {
+	margin-left: 8px;
+}
+
+
+
+
 .timelinelist i {	
 	position: absolute;
-	top: 88px;
-	left: -10px;
-	font-size: 1.5em;
-	text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
-
+	bottom: -27px;
+	font-size: 1.25em;
+}
+.timelinelist i:nth-child(2) {	
+	color: red;
 }
 .timelinelist p {
 	-webkit-transform: rotate(-40deg);
@@ -436,14 +496,42 @@ main {
 #london {
 	background-image: url("img/london.png");
 	background-size: cover;
+	background-blend-mode: luminosity;
 }
 #newyork {
 	background-image: url("img/sub.png");
 	background-size: cover;
+	background-blend-mode: luminosity;
 }
 #tokyo {
 	background-image: url("img/tokyo.png");
 	background-size: cover;
+	background-blend-mode: luminosity;
+}
+#london:hover {
+	background-image: url("img/london.png");
+	background-blend-mode: normal;
+	transform: scale(1.05);
+	border-color: white;
+  box-shadow: 0px 0px 20px #fcfc04;
+
+	
+}
+#newyork:hover {
+	background-image: url("img/sub.png");
+	background-blend-mode: normal;
+	transform: scale(1.05);
+	border-color: white;
+  box-shadow: 0px 0px 20px #fcfc04;
+	
+}
+#tokyo:hover {
+	background-image: url("img/tokyo.png");
+	background-blend-mode: normal;
+	transform: scale(1.05);
+	border-color: white;
+  box-shadow: 0px 0px 20px #fcfc04;
+	
 }
 
 #villes p {  
@@ -454,6 +542,7 @@ main {
    margin: auto;
    line-height: 1.75em;
 }
+
 #devtarif p span {
   font-size: 1.5em;
    color: white;
@@ -477,14 +566,14 @@ main {
 
 
 /*------------------------------FORMULAIRE--------------------------*/
-.formulaire {
+#formulaire {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center; 
    margin-top: 50px;
 }
-.formulaire h2 {
+#formulaire h2 {
 	background-color: #fcfc04;
 	color: #100c0c;
 	width: 90%;
@@ -508,7 +597,7 @@ button {
   position: relative;
   top: 0;
   transition: all 300ms ease-in-out;
-  box-shadow: 0 0.3em #bc040c, 0 0.6em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.3em #bc040c, 0 0.6em rgba(0, 0, 0, 0.85);
    border: 5px solid black;
    margin-bottom: 50px;
 }
@@ -517,7 +606,7 @@ form {
 }
 button:active {
   top: 0.6em;
-  box-shadow: 0 0.2em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em rgba(0, 0, 0, 0.85);
 }
 label {
   display: block;
@@ -717,15 +806,16 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 	width: 23%;
 }
 #divfooterleft {
-	margin-left: 8%;
+	margin-left: 8.2%;
 	
 }
 #divfooterright {
-	margin-right: 8.5%;
+	margin-right: 8.3%;
 }
 #divfooter i {
 	
-    padding:0 1px 0 2px;  
+    padding:0 1px 0 2px; 
+    text-shadow: -2.5px 0 #000, 0 2.5px #000, 2.5px 0 #000, 0 -2.5px #000; 
     /*text-shadow: 5px 1px 10px rgba(0, 0, 0, .8);
      /*animation: jump 2s infinite linear; */   
     }

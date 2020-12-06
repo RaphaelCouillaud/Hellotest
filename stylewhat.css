@@ -211,7 +211,11 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 
 /*-------------------------------------SECTION SITE-----------------------------------*/
-
+main {  
+  background: url("img/subgreycopie.png");
+    background-size: contain;
+    background-repeat: repeat;      
+}
 #sectionwhat {	
 	display: flex;
 	flex-direction: column;
@@ -219,9 +223,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 #nouveausite {
   width: 90%;
   text-align: center;
-  color: #100c0c;
-  background: white/*#d4d4d4*/;
-  opacity: 0.8;
+  color: #100c0c;  
   font-size: 1.2em;
   margin-top: 0;
   margin: auto;
@@ -234,8 +236,13 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 90%;
+  width: 70%;
   background: #100c0c;
+  opacity: 0.8;
+  padding-top: 50px;
+   box-shadow: inset 0px 0px 0px 6px white;
+   border: 6px solid black;
+   border-radius: 30px;
  
 }
 .listechoix {
@@ -244,22 +251,24 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
   flex-wrap: wrap;
   justify-content: space-around;
    margin: auto;
+   margin-top: 25px;
+   margin-bottom: 50px;
 }
 .titrechoix {
   text-align: center;
 }
 
 .titrechoix h4 {
-  font-size: 2.2em; 
-  color: #bc040c;
-   font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-   width: 80%;
-   height: 80px;
+  font-size: 2em; 
+  color: #100c0c;
+   width: 90%;
+   height: auto;
    margin: auto;   
    background-color: #fcfc04;
    border-radius: 30px 30px 0 0;
    box-shadow: 0px -10px 5px 2px black;
    align-content: center;
+   padding: 12px 0 12px 0;
 }
 
 .detailchoix {
@@ -284,8 +293,15 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 	border: 6px solid red;
 }
 .detailchoix i {
-   padding: 10px 10px 0 10px;    
+   padding: 15px 10px 0 10px;    
     font-size: 2.8em;
+
+}
+.detailchoix:hover {
+  transform: scale(1.05);
+  border-color: white;
+  box-shadow: 0px 0px 20px #fcfc04;
+  text-shadow: -1px 0 2.5px #fcfc04, 0 1px 2.5px #fcfc04, 1px 0 2.5px #fcfc04, 0 -1px 2.5px #fcfc04;
 }
 .detailchoix p {
     display: flex;
@@ -304,51 +320,104 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 #todolist, #refonte {
   width: 90%;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  font-size: 1em; 
-  margin-top: 25px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x:hidden;
+  padding-bottom: 50px;
+  background: #456990;
 }
-#todocontainer, #refontecontainer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  font-size: 1.4em;
- 
+.todocontainer ul li{
+  list-style-type:none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top:50px;
+  background: #fff;
 }
-#todoleft, #refonteleft {
-  text-align: right;
-   width: 50%;
-   border-right: 8px solid #f48424;
-   position: relative; 
+.todocontainer ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  background: #fff;
+  transition: background .5s ease-in-out;
+  }
+.todocontainer ul li div{
+  position: relative;
+  bottom:0;
+  width:400px;
+  padding:15px;
+  background: #F45B69;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+
 }
-#todoleft i, #refonteleft i {
-   position: absolute;
-  right: -16px;
-  box-shadow: inset 0px 0px 0px 20px white;
-   border: 5px solid #fcfc04;
-   border-radius: 100%
+.todocontainer ul li div::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
-#todoleft p, #refonteleft p {
-   margin-right: 25px;
+
+.todocontainer ul li:nth-child(odd) div {
+  left: 45px;
+  transform: translate3d(200px,0,0);
 }
-#todoright p, #refonteright p {
-   margin-left: 25px;
-}
-#todoright, #refonteright {
-   width: 50%;
-   margin-top: 35px;
-    position: relative;  
-}
-#todoright i, #refonteright i {
-   position: absolute;
+.todocontainer ul li:nth-child(odd) div::before {
   left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #F45B69 transparent transparent;
 }
-#toporefonte, #topolist {
-  margin: auto;
+
+.todocontainer ul li:nth-child(even) div {
+  left: -439px;
+  transform: translate3d(-200px,0,0);
 }
+ 
+.todocontainer ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #F45B69;
+}
+
+.todocontainer ul li.in-view::after {
+  background: #F45B69;
+}
+
+.todocontainer ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  .todocontainer ul li {
+    margin-left: 20px;
+  }
+   
+  .todocontainer ul li div {
+    width: calc(100vw - 91px);
+  }
+   
+  .todocontainer ul li:nth-child(even) div {
+    left: 45px;
+  }
+   
+  .todocontainer ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
+}
+
+
  
 /*-------------------------------------SECTION REFERENCEMENT-----------------------------------*/
 #referencement, #securisation {
