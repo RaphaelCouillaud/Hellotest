@@ -264,7 +264,7 @@ main {
    width: 90%;
    height: auto;
    margin: auto;   
-   background-color: #fcfc04;
+   background-color: #2cbcc4/*#fcfc04*/;
    border-radius: 30px 30px 0 0;
    box-shadow: 0px -10px 5px 2px black;
    align-content: center;
@@ -284,7 +284,7 @@ main {
     text-align: center;
    vertical-align: middle;
    box-shadow: inset 0px 0px 0px 6px white;
-   border: 6px solid #fcfc04;
+   border: 6px solid #2cbcc4;
 }
 
 
@@ -307,7 +307,7 @@ main {
     display: flex;
    vertical-align: middle;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 0px 10px 0 10px; 
     margin: auto;
 
@@ -324,15 +324,21 @@ main {
   text-align: center;
   overflow-x:hidden;
   padding-bottom: 50px;
-  background: #456990;
+  
+}
+.todocontainer p {
+	font-size: 1.3em;
+	color: white;
 }
 .todocontainer ul li{
   list-style-type:none;
   position: relative;
-  width: 6px;
+  width: 8px;
   margin: 0 auto;
   padding-top:50px;
-  background: #fff;
+  background: #100c0c;
+  opacity: 0.8;
+  border-radius: 30px;
 }
 .todocontainer ul li::after {
   content: '';
@@ -340,28 +346,31 @@ main {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background: inherit;
-  background: #fff;
+  background: #100c0c;
   transition: background .5s ease-in-out;
-  }
+ }
 .todocontainer ul li div{
   position: relative;
   bottom:0;
   width:400px;
   padding:15px;
-  background: #F45B69;
+  background: #100c0c;
   visibility: hidden;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.7s ease-in-out;
+ border-radius: 30px;
+ box-shadow: inset 0px 0px 0px 6px white;
+  border: 6px solid #2cbcc4;
 
 }
 .todocontainer ul li div::before {
   content: '';
   position: absolute;
-  bottom: 7px;
+  bottom: 14px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -372,24 +381,25 @@ main {
   transform: translate3d(200px,0,0);
 }
 .todocontainer ul li:nth-child(odd) div::before {
-  left: -15px;
-  border-width: 8px 16px 8px 0;
-  border-color: transparent #F45B69 transparent transparent;
+  left: -32px;
+  border-width: 15px 30px 15px 0;
+  border-color: transparent #2cbcc4 transparent transparent;
+
 }
 
 .todocontainer ul li:nth-child(even) div {
-  left: -439px;
+  left: -480px;
   transform: translate3d(-200px,0,0);
 }
  
 .todocontainer ul li:nth-child(even) div::before {
-  right: -15px;
-  border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #F45B69;
+  right: -32px;
+  border-width: 15px 0 15px 30px;
+  border-color: transparent transparent transparent #2cbcc4;
 }
 
 .todocontainer ul li.in-view::after {
-  background: #F45B69;
+  background: #2cbcc4;
 }
 
 .todocontainer ul li.in-view div {
@@ -397,27 +407,30 @@ main {
   visibility: visible;
   opacity: 1;
 }
-@media screen and (max-width: 600px) {
-  .todocontainer ul li {
-    margin-left: 20px;
-  }
-   
-  .todocontainer ul li div {
-    width: calc(100vw - 91px);
-  }
-   
-  .todocontainer ul li:nth-child(even) div {
-    left: 45px;
-  }
-   
-  .todocontainer ul li:nth-child(even) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent #F45B69 transparent transparent;
-  }
+/*-------------------------------------SECTION REFONTE-----------------------------------*/
+#refonte .todocontainer p {
+	color: #100c0c;
 }
-
-
+#refonte .todocontainer ul li{
+  background: #2cbcc4;
+}
+#refonte .todocontainer ul li::after {
+  background: #2cbcc4;
+ }
+#refonte .todocontainer ul li div{
+  background: white;
+ box-shadow: inset 0px 0px 0px 6px #2cbcc4;
+  border: 6px solid #100c0c;
+}
+#refonte .todocontainer ul li:nth-child(odd) div::before {
+  border-color: transparent #100c0c transparent transparent;
+}
+#refonte .todocontainer ul li:nth-child(even) div::before {
+  border-color: transparent transparent transparent #100c0c;
+}
+#refonte .todocontainer ul li.in-view::after {
+  background: #100c0c;
+}
  
 /*-------------------------------------SECTION REFERENCEMENT-----------------------------------*/
 #referencement, #securisation {
@@ -425,16 +438,181 @@ main {
   margin: auto;
   text-align: center;
   font-size: 1.2em;
+  padding-bottom: 200px;
 }
-#referencement i {
-  color: green;
-  margin-right: 10px;
+
+.menu-seo {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  position: relative;
+  margin: auto;
+  width: 170px;
+  height: 170px;
+  text-align: center;
+  background: white;
+  border-radius: 50%;
+  color: #100c0c;
+  cursor: pointer;
+  border-top: 12px solid #4285F4;
+  border-right: 12px solid #EA4335; 
+  border-bottom: 12px solid #FBBC05; 
+  border-left: 12px solid #34A853;
+  display: flex;
 }
+
+.menu-seo:hover {
+  background: white;
+  color: #100c0c;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4), 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+ }
+.menu-seo a {
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: normal;
+  border-radius: 50%;
+  color: #100c0c;
+  font-size: 1em;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+
+
+ 
+}
+.menu-seo a:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+
+}
+.menu-seo p {
+  color: #100c0c;
+  width: 150px;
+  height: auto;
+  text-align: center;
+  margin: auto;
+  padding: 15px;
+}
+.menu-seo p:nth-child(1) {
+  font-size: 2em;
+}
+.menu-seo a:nth-child(2) {
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #4285F4;
+}
+.menu-seo a:nth-child(3) {
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #EA4335;
+}
+.menu-seo a:nth-child(4) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #100c0c;
+}
+.menu-seo a:nth-child(5) {
+  -webkit-transition-delay: 0.6s;
+  -moz-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #FBBC05;
+}
+.menu-seo a:nth-child(6) {
+  -webkit-transition-delay: 0.7s;
+  -moz-transition-delay: 0.7s;
+  transition-delay: 0.7s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background: #34A853;
+}
+.menu-seo:hover a {
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+
+}
+.menu-seo:hover a:nth-child(2) {
+  right: 500px;
+  bottom: 150px;
+}
+.menu-seo:hover a:nth-child(2):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+
+}
+.menu-seo:hover a:nth-child(3) {
+  right: 350px;
+  bottom: 0px;
+}
+.menu-seo:hover a:nth-child(3):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+ 
+}
+.menu-seo:hover a:nth-child(4) {
+  right: 125px;
+  bottom: -100px;
+}
+.menu-seo:hover a:nth-child(4):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.menu-seo:hover a:nth-child(5) {
+  right: -100px;
+  bottom: -0px;
+}
+.menu-seo:hover a:nth-child(5):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.menu-seo:hover a:nth-child(6) {
+  right: -300px;
+  bottom: 150px;
+}
+.menu-seo:hover a:nth-child(6):hover {
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+
+/*-------------------------------------SECTION SECURITE-----------------------------------*/
+
+#securisation {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
 #securisation i {
   color: green;
   margin-right: 10px;
 }
-/*-------------------------------------SECTION SECURITE-----------------------------------*/
 #secuimg img {
   width: 20%;
   margin-top: 0;
@@ -755,4 +933,26 @@ footer figure img {
   0%  {background-position: 0 0;}
   100%  {background-position: -2122px 0;} 
 
+}
+
+
+/*--------------------------------------RESPONSIVE-----------------------------------------*/
+@media screen and (max-width: 600px) {
+  .todocontainer ul li {
+    margin-left: 20px;
+  }
+   
+  .todocontainer ul li div {
+    width: calc(100vw - 91px);
+  }
+   
+  .todocontainer ul li:nth-child(even) div {
+    left: 45px;
+  }
+   
+  .todocontainer ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }
 }
