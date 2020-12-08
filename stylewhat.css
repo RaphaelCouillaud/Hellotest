@@ -156,7 +156,7 @@ h1 {
   padding: 12px;
   color: #fcfc04;
   font-family: 'Press Start 2P', cursive;
-    opacity: 0.75;
+    opacity: 0.85;
     font-size: 26px;
     vertical-align: middle;
     text-shadow: 0px 0px 15px #fcfc04;
@@ -219,6 +219,7 @@ main {
 #sectionwhat {	
 	display: flex;
 	flex-direction: column;
+  margin-top: 50px;
 }
 #nouveausite {
   width: 90%;
@@ -323,22 +324,28 @@ main {
   margin: 0 auto;
   text-align: center;
   overflow-x:hidden;
-  padding-bottom: 50px;
   
+  margin-top: 50px;
 }
 .todocontainer p {
-	font-size: 1.3em;
-	color: white;
+	font-size: 1.25em;
+	color: #100c0c;
+  margin: 0;
+}
+.todocontainer ul li div p:nth-child(1) {
+  font-size: 2.5em;
+  padding-top: 10px;
 }
 .todocontainer ul li{
   list-style-type:none;
   position: relative;
   width: 8px;
-  margin: 0 auto;
-  padding-top:50px;
-  background: #100c0c;
+  margin: auto;
+  padding-top: 50px;
+  background: #2cbcc4;
   opacity: 0.8;
   border-radius: 30px;
+  
 }
 .todocontainer ul li::after {
   content: '';
@@ -350,22 +357,24 @@ main {
   height: 25px;
   border-radius: 50%;
   background: inherit;
-  background: #100c0c;
+  background: #2cbcc4;
   transition: background .5s ease-in-out;
  }
+ .todocontainer ul li div p:nth-child(2) {
+  padding-bottom: 10px;
+}
 .todocontainer ul li div{
   position: relative;
-  bottom:0;
-  width:400px;
-  padding:15px;
-  background: #100c0c;
+  bottom: 0;
+  width: 350px;
+  padding: 0 15px 0 15px;  
+  background: white;
   visibility: hidden;
   opacity: 0;
   transition: all 0.7s ease-in-out;
  border-radius: 30px;
- box-shadow: inset 0px 0px 0px 6px white;
-  border: 6px solid #2cbcc4;
-
+ box-shadow: inset 0px 0px 0px 6px #2cbcc4;
+  border: 6px solid #100c0c;
 }
 .todocontainer ul li div::before {
   content: '';
@@ -383,7 +392,7 @@ main {
 .todocontainer ul li:nth-child(odd) div::before {
   left: -32px;
   border-width: 15px 30px 15px 0;
-  border-color: transparent #2cbcc4 transparent transparent;
+  border-color: transparent #100c0c transparent transparent;
 
 }
 
@@ -395,11 +404,11 @@ main {
 .todocontainer ul li:nth-child(even) div::before {
   right: -32px;
   border-width: 15px 0 15px 30px;
-  border-color: transparent transparent transparent #2cbcc4;
+  border-color: transparent transparent transparent #100c0c;
 }
 
 .todocontainer ul li.in-view::after {
-  background: #2cbcc4;
+  background: #100c0c;
 }
 
 .todocontainer ul li.in-view div {
@@ -409,36 +418,37 @@ main {
 }
 /*-------------------------------------SECTION REFONTE-----------------------------------*/
 #refonte .todocontainer p {
-	color: #100c0c;
+	color: white;
 }
 #refonte .todocontainer ul li{
-  background: #2cbcc4;
+  background: #100c0c;
 }
 #refonte .todocontainer ul li::after {
-  background: #2cbcc4;
+  background: #100c0c;
  }
 #refonte .todocontainer ul li div{
-  background: white;
- box-shadow: inset 0px 0px 0px 6px #2cbcc4;
-  border: 6px solid #100c0c;
+  background: #100c0c;
+ box-shadow: inset 0px 0px 0px 6px white;
+  border: 6px solid #2cbcc4;
 }
 #refonte .todocontainer ul li:nth-child(odd) div::before {
-  border-color: transparent #100c0c transparent transparent;
+  border-color: transparent #2cbcc4 transparent transparent;
 }
 #refonte .todocontainer ul li:nth-child(even) div::before {
-  border-color: transparent transparent transparent #100c0c;
+  border-color: transparent transparent transparent #2cbcc4;
 }
 #refonte .todocontainer ul li.in-view::after {
-  background: #100c0c;
+  background: #2cbcc4;
 }
  
 /*-------------------------------------SECTION REFERENCEMENT-----------------------------------*/
-#referencement, #securisation {
+#referencement {
   width: 80%;
   margin: auto;
   text-align: center;
   font-size: 1.2em;
   padding-bottom: 200px;
+  margin-top: 50px;
 }
 
 .menu-seo {
@@ -447,8 +457,8 @@ main {
   transition: 0.4s;
   position: relative;
   margin: auto;
-  width: 170px;
-  height: 170px;
+  width: 200px;
+  height: 200px;
   text-align: center;
   background: white;
   border-radius: 50%;
@@ -459,12 +469,20 @@ main {
   border-bottom: 12px solid #FBBC05; 
   border-left: 12px solid #34A853;
   display: flex;
+
 }
+
+
+
 
 .menu-seo:hover {
   background: white;
   color: #100c0c;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.4), 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+  border-top: 20px solid #EA4335;
+  border-right: 20px solid #FBBC05; 
+  border-bottom: 20px solid #34A853; 
+  border-left: 20px solid #4285F4;
  }
 .menu-seo a {
   -webkit-transition: 0.4s;
@@ -497,7 +515,7 @@ main {
   padding: 15px;
 }
 .menu-seo p:nth-child(1) {
-  font-size: 2em;
+  font-size: 3em;
 }
 .menu-seo a:nth-child(2) {
   -webkit-transition-delay: 0.3s;
@@ -509,36 +527,36 @@ main {
   background: #4285F4;
 }
 .menu-seo a:nth-child(3) {
-  -webkit-transition-delay: 0.4s;
-  -moz-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  background: #EA4335;
-}
-.menu-seo a:nth-child(4) {
   -webkit-transition-delay: 0.5s;
   -moz-transition-delay: 0.5s;
   transition-delay: 0.5s;
   position: absolute;
   right: 30px;
   bottom: 30px;
+  background: #EA4335;
+}
+.menu-seo a:nth-child(4) {
+  -webkit-transition-delay: 0.7s;
+  -moz-transition-delay: 0.7s;
+  transition-delay: 0.7s;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
   background: #100c0c;
 }
 .menu-seo a:nth-child(5) {
-  -webkit-transition-delay: 0.6s;
-  -moz-transition-delay: 0.6s;
-  transition-delay: 0.6s;
+  -webkit-transition-delay: 0.9s;
+  -moz-transition-delay: 0.9s;
+  transition-delay: 0.9s;
   position: absolute;
   right: 30px;
   bottom: 30px;
   background: #FBBC05;
 }
 .menu-seo a:nth-child(6) {
-  -webkit-transition-delay: 0.7s;
-  -moz-transition-delay: 0.7s;
-  transition-delay: 0.7s;
+  -webkit-transition-delay: 1s;
+  -moz-transition-delay: 1s;
+  transition-delay: 1s;
   position: absolute;
   right: 30px;
   bottom: 30px;
@@ -606,6 +624,7 @@ main {
   margin: auto;
   text-align: center;
   font-size: 1.2em;
+  margin-top: 50px;
 }
 
 
@@ -628,30 +647,12 @@ main {
   margin: auto;
   text-align: center;
   font-size: 1.2em;
+  margin-top: 50px;
 }
-#comparaison article {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-.comp {
-  width: 40%;
-  margin: auto;
-  
-}
-.comp h3 {
-  font-size: 2.2em;
-  text-align: center;
-  width: 100%;
-}
-.comp h3 strong, #comparaison strong {
+
+#comparaison strong {
   font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   color: #bc040c;
-}
-#comparaison span i {
-  color: green;
-  margin-right: 10px;
-  font-size: 1.2em;
 }
 .fa-times {
   color: red;
@@ -663,12 +664,10 @@ main {
   color: green;
 }
 #imgouix {
-  width: 500px;
-  height: 360px;  
-  background-size: contain;
+  background-size: cover;
   background-image: url("img/ouix1.jpg");
   margin: auto;
-  
+  border-radius: 30px;
 }
 #imgouix:hover {
   -webkit-transition: .6s ease-in-out;
@@ -677,201 +676,63 @@ main {
   background-size: cover;
 }
 #imghello {
-  width: 500px;
-  height: 360px;  
-  background-size: contain;
-   background-image: url("img/ouixalt2.jpg");
-}
-
-/*-------------------------------------SECTION TARIFS-----------------------------------*/
-#tarifs {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  text-align: center;  
-  width: 80%;  
-  text-align: center;
-  font-size: 1.2em;
-  
-}
-
-
-#euroscontainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-}
-#villes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-#london, #newyork, #tokyo {
-  width: 300px;
-  height: 350px;
-  color: #bc040c;
   background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
+   background-image: url("img/ouixalt2.jpg");
+   margin: auto;
+   
+   border-radius: 30px;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;  
+}
+thead tr th:nth-child(1) {
+  height: 360px;
+}
 
 
+thead th:nth-child(1) {
+  width: 25%;
+}
+
+thead th:nth-child(2) {
+  width: 37.5%;
+}
+
+thead th:nth-child(3) {
+  width: 37.5%;
+}
+th, td {
+  padding: 10px;
+   box-shadow: inset 0px 0px 0px 6px #100c0c;
+
    
+   border-radius: 30px;
 }
-#newyork {
-   background-image: url("img/subgrey.png");
-   
+th:nth-child(odd) {
+  color: #100c0c;
+
 }
-#london {
-   background-image: url("img/tube.jpg");
-    
-}
-#tokyo {
-   background-image: url("img/tokyo.jpg");
-}
-#villes p {  
-  font-size: 1.3em;
-  font-style: italic;
- border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
+th:nth-child(even) {
+  color: white;
  
-  vertical-align: middle;
-  margin: auto;
-  font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  
 }
-#devtarif p span {
-  font-size: 1.3em;
-   color: #bc040c;
-   font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-   font-style: italic;
+tbody tr:nth-child(odd) {
+  background-color: white;
+  /*opacity: 0.8;*/
 }
-#maintarif strong {
-  font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  color: #bc040c;
+tbody tr:nth-child(even) {
+  background-color: #2cbcc4;
+  /*opacity: 0.8;*/
 }
-
-
-
-
-
-
-
-
-
-/*------------------------------FORMULAIRE--------------------------*/
-.formulaire_commande, .recapitulatif {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
+tbody td i {
+  font-size: 1.25em;
 }
-#commander {
-  font-size: 2em;
-}
-.fas:hover {
-  cursor: pointer;
-}
-
-label {
-  display: block;
-  width: 30%; 
-  font-size: 1.2em;  
-  text-align: center;  
-}
-input {
-  width: 70%;
-  height: 3em;
-  box-sizing: border-box;  
-  outline: none;
-}
-input:focus {
-  border-color: #bc040c;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
-}
-.form-group {
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 15px;
-}
-.cadre {
-  margin: auto;
-  width: 50%; 
-}
-#name, #email {
-  width: 70%;
-  margin: auto;
-}
-#panier-recap, #confirmation-recap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;  
-  font-size: 1.5em;
-  font-weight: bolder;   
-}
-.recapitulatif h2 {
-  font-size: 1.5em;
-  font-weight: bolder;
-  margin-bottom: 0;
-  margin-top: 25px; 
-}/*--------formulaire-------*/
-.formulaire_commande, .recapitulatif {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-}
-#commander {
-  font-size: 2em;
-}
-.fas:hover {
-  cursor: pointer;
-}
-
-label {
-  display: block;
-  width: 30%; 
-  font-size: 1.2em;  
-  text-align: center;  
-}
-input {
-  width: 70%;
-  height: 3em;
-  box-sizing: border-box;  
-  outline: none;
-}
-input:focus {
-  border-color: #bc040c;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8)
-}
-.form-group {
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 15px;
-}
-.cadre {
-  margin: auto;
-  width: 50%; 
-}
-#name, #email {
-  width: 70%;
-  margin: auto;
-}
-#panier-recap, #confirmation-recap {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;  
-  font-size: 1.5em;
-  font-weight: bolder;   
-}
-.recapitulatif h2 {
-  font-size: 1.5em;
-  font-weight: bolder;
-  margin-bottom: 0;
-  margin-top: 25px; 
+.fa-asterisk {
+  color: black;
+  font-size: 0.75em;
 }
 
 /*-------------------------------NAV FOOTER-------------------------*/
