@@ -324,7 +324,6 @@ main {
   margin: 0 auto;
   text-align: center;
   overflow-x:hidden;
-  
   margin-top: 50px;
 }
 .todocontainer p {
@@ -447,7 +446,7 @@ main {
   margin: auto;
   text-align: center;
   font-size: 1.2em;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
   margin-top: 50px;
 }
 
@@ -618,28 +617,75 @@ main {
 
 
 /*-------------------------------------SECTION SECURITE-----------------------------------*/
+canvas {
+  overflow: hidden;
+  opacity: 0.8;
+  width: 100%;
+  border-radius: 30px;
+  border: 6px solid #100c0c;
+  box-shadow: inset 0px 0px 0px 6px white;
+  padding: 12px;
+  height: 750px;
 
+}
 #securisation {
   width: 80%;
-  margin: auto;
+ margin: auto;
   text-align: center;
   font-size: 1.2em;
   margin-top: 50px;
+  position: relative;
+}
+#divsecu {
+  position: absolute;
+  bottom: 100px;
+  color: white;
+  margin: auto;
+  padding: 0 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+#divsecu1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+#divsecu1 h3 {
+  margin: 0;
+  align-items: center;
 }
 
-
-#securisation i {
-  color: green;
-  margin-right: 10px;
-}
-#secuimg img {
-  width: 20%;
-  margin-top: 0;
-}
-#secuimg {
+#divsecu2 {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  margin: auto;
 }
+.toposecu {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+}
+.toposecu p{
+  text-align: justify;
+}
+#securisation i {
+  color: red;
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+.imgsecu {
+  width: 45%;
+  padding: 0;
+  margin: auto;
+}
+#engagement {
+  font-size: 1.5em;
+}
+
 
 /*-------------------------------------SECTION COMPARAISON-----------------------------------*/
 #comparaison {
@@ -661,6 +707,11 @@ main {
   color: orange;
 }
 .fa-check {
+  color: green;
+}
+.fa-hand-point-right {
+  font-size: 2em;
+  margin-right: 10px;
   color: green;
 }
 #imgouix {
@@ -686,19 +737,20 @@ main {
 table {
   table-layout: fixed;
   width: 100%;
-  border-collapse: collapse;  
+  border-collapse: collapse;
 }
+
 thead tr th:nth-child(1) {
   height: 360px;
 }
 
 
 thead th:nth-child(1) {
-  width: 25%;
+  width: 37.5%;
 }
 
 thead th:nth-child(2) {
-  width: 37.5%;
+  width: 25%;
 }
 
 thead th:nth-child(3) {
@@ -706,7 +758,8 @@ thead th:nth-child(3) {
 }
 th, td {
   padding: 10px;
-   box-shadow: inset 0px 0px 0px 6px #100c0c;
+   box-shadow: inset 0px 0px 0px 5px #100c0c;
+
 
    
    border-radius: 30px;
@@ -716,16 +769,20 @@ th:nth-child(odd) {
 
 }
 th:nth-child(even) {
-  color: white;
+  color: #100c0c;
  
 }
-tbody tr:nth-child(odd) {
-  background-color: white;
-  /*opacity: 0.8;*/
+tbody tr:nth-child(odd):hover {
+  background-color: #b4b4b4;
+  transform: scale(1.02);
+  transition: left 0.1s, transform 0.1s;
+  white-space: nowrap;
 }
-tbody tr:nth-child(even) {
+tbody tr:nth-child(even):hover {
   background-color: #2cbcc4;
-  /*opacity: 0.8;*/
+  transform: scale(1.02);
+  transition: left 0.1s, transform 0.1s;
+  white-space: nowrap;
 }
 tbody td i {
   font-size: 1.25em;
