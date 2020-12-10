@@ -45,7 +45,7 @@ header {
 
 /*-----------------------------NAVBAR---------------------------------*/
 
-nav, #navleft, #navcenter, #navright {
+nav, #navleft, .navcenter, #navright {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -107,23 +107,28 @@ nav i {
 .circles:hover, .circles:focus {
 	transform: scale(1.2);
 }
+
 a strong {
 	position: absolute;
 	margin-top: 70px;
-    margin-left: -80px;
+    margin-left: -60px;
      color: white;
      background: #100c0c;
      padding: 5px;
      text-align: center;
      width: 145px;
      font-size: 1.1em;
-     transform: scale(0) rotate(-20deg);
-     transition: all .35s;
+     background-image: url("img/nav1.jpg");
+     background-size: cover;
+    /* transform: scale(0) rotate(60deg);*/
+     transition: all .5s;
      opacity:0;
      box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .5);
+     transform: translate(5%, -10px);
 }
+
 a:hover strong, a:focus strong {
-	transform:scale(1) rotate(0);
+	transform: translate(5%, 0px);
 	 opacity:1;  
 }
 #navright .circles span {
@@ -158,20 +163,35 @@ background-color: #141c2c;
 	border-radius: 10%;
 	border: 2px solid white;
 }
-#navcenter {
-	width: 166px;
+.navcenter {
+	width: auto;
 	margin: auto;
 	justify-content: space-around;
 	margin-top: 58px;
 	background: #100c0c;
 }
-#navcenter span {
-	font-size: 50px;
+	
+.navcenter a {
+	font-size: 40px;
 	background: #bc040c;
 	color: white;
-	margin-bottom: 0;
 	font-weight: bolder;
-	margin-left: 2px;
+	margin: auto;
+	height: 70px;
+	display: flex;
+	
+}
+.navcenter span {
+	padding: 5px;
+	margin: auto;
+	
+}
+.fa-arrow-up {
+	margin: 0;
+	padding: 5px;
+}
+#rotate {
+	transform: rotate(315deg)
 }
 
 /*-------------------------------PARALLAX----------------------------------*/
@@ -686,30 +706,41 @@ input:focus, textarea:focus {
 
 
 /*-------------------------------NAV FOOTER-------------------------*/
-#navfooter span {
-	font-size: 50px;
-	background: #bc040c;
-	color: white;
-	margin-bottom: 0;
-	font-weight: bolder;
-	margin-left: 2px;
-}
-
-#navfooter {
-	display: flex;
-	flex-direction: row;
+.navfooter {
+	
+	flex-direction: column;
 	flex-wrap: wrap;
-	width: 180px;
-	margin: auto;
-	justify-content: space-around;	
+	width: 5%;
+	justify-content: space-around;
+	margin-top: 58px;
 	background: #100c0c;
+	border: 3px solid red;
+	color: red;
 	
 
+
+
+
 }
-#navfooter i {
-	color: white;
-	font-size: 60px;
+	
+.navfooter a {
+	font-size: 40px;
+	background: #bc040c;
+	
+	font-weight: bolder;
 	margin: auto;
+	height: 70px;
+	display: flex;
+	
+}
+.navfooter span {
+	padding: 5px;
+	margin: auto;
+	
+}
+.fa-arrow-up {
+	margin: 0;
+	padding: 5px;
 }
 
 /*-------------------------------FOOTER-------------------------*/
