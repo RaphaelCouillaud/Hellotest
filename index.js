@@ -28,72 +28,24 @@ const paral = document.getElementById("pp");
 		console.log(window.pageYOffset);
 };*/
 
-const prevButton = document.getElementById("carousel-button-prev");
-const nextButton = document.getElementById("carousel-button-next");
-const slideNav = document.getElementById("carousel-slide-nav");
-const slides = document.querySelectorAll(".carousel-item");
-const totalSlides = slides.length;
-let slidePos = 0;
-let navigation = slideNav.childNodes;
 
-slideNavigation();
 
-function displaySlide(element, className) {
-  for (let item = 0; item < totalSlides; item++) {
-    item === slidePos
-      ? element[item].classList.add(className)
-      : element[item].classList.remove(className);
-  }
-}
 
-function nextSlide() {
-  if (slidePos === totalSlides - 1) {
-    slidePos = 0;
+
+
+
+
+
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  
+  if (window.pageYOffset > 500) {
+    toTop.classList.add("active");
   } else {
-    slidePos++;
+    toTop.classList.remove("active");
   }
-  displaySlide(slides, "carousel-item-visible");
-  displaySlide(navigation, "nav-current");
-}
-
-function prevSlide() {
-  if (slidePos === 0) {
-    slidePos = totalSlides - 1;
-  } else {
-    slidePos--;
-  }
-  displaySlide(slides, "carousel-item-visible");
-  displaySlide(navigation, "nav-current");
-}
-
-function slideNavigation() {
-  for (let slide = 0; slide < totalSlides; slide++) {
-    let span = document.createElement("span");
-    if (slide === slidePos) {
-      span.classList.add("nav-current");
-    }
-    slideNav.append(span);
-    span.addEventListener("click", function () {
-      slidePos = slide;
-      displaySlide(slides, "carousel-item-visible");
-      displaySlide(navigation, "nav-current");
-    });
-  }
-}
-
-prevButton.addEventListener("click", prevSlide);
-nextButton.addEventListener("click", nextSlide);
-
-setInterval(nextSlide, 7500);
-
-
-
-
-
-
-
-
-
+})
 
 
 

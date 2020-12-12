@@ -5,8 +5,12 @@ body {
 	font-family: Helvetica, 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 2em;	
 }
-strong {
+span {
 	font-size: 2.5em;
+}
+strong {
+	 font-family: 'MrRobot', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  color: #bc040c;
 }
 figure {
 	width: 100%;
