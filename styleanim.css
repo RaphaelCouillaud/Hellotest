@@ -121,6 +121,16 @@ p {
 	100% {background-position:  1920px 0;}
 }
 
+
+
+/*--------------------------------------------------*/
+
+
+
+
+
+
+
 /*-----------------------------Responsive laptops-----------------------------------------*/
 /*--Sur les écrans, quand la largeur de la fenêtre fait au maximum 1440px--*/
 @media screen and (max-width: 1440px)

@@ -55,3 +55,28 @@ prevButton.addEventListener("click", prevSlide);
 nextButton.addEventListener("click", nextSlide);
 
 setInterval(nextSlide, 7500);
+
+
+
+
+
+
+
+var hotbod = document.querySelector("body");
+
+function doStuff() {
+    hotbod.className += " animate";
+}
+
+window.onload = function() {
+    doStuff();
+};
+
+
+
+
+
+
+
+
+

@@ -53,7 +53,7 @@ header {
 
 /*-----------------------------NAVBAR---------------------------------*/
 
-nav, #navleft, #navcenter, #navright {
+nav, #navleft, .navcenter, #navright {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -66,87 +66,151 @@ nav i {
   color: white;
   font-size: 60px;
   margin: auto;
+  margin: 10px;
 }
-#navcenter span {
-  font-size: 50px;
-  background: #bc040c;
-  color: white;
-  margin-bottom: 0;
-  font-weight: bolder;
-  margin-left: 2px;
-}
+
 #navleft, #navright {
-  width: 470px;
-  height: 90px;
+  width: auto;
+  height: 100px;
   margin: auto;
   justify-content: space-around;
-  align-items: center;  
+  align-items: center;
+  background-image: url("img/nav1.jpg");
+  background-size: contain;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .3);
 }
-#navcenter {
-  width: 166px;
+
+.circles {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;  
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px 0 10px;
+}
+
+.circles i {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 5px 10px 0 10px;
+  
+}
+.circles span {
+  position: absolute;
+  top: 1px;
+  left: 14px;
+  font-size: 3.1em;
+  color: white;
+  font-weight: bolder;
+}
+#position1 {
+  top: 0px;
+  left: 10px;
+}
+#position4 {
+  top: 0px;
+  left: 11px;
+}
+#position5 {
+  
+  left: 10px;
+}
+#position6 {
+  
+  left: 8px;
+}
+#position7 {
+  top: 0px;
+  left: 13px;
+}
+#spanwho span {
+  top: -5px;
+  left: 12px;
+  font-size: 2.85em;
+  margin-top: 2px;  
+
+}
+.circles:hover, .circles:focus {
+  transform: scale(1.2);
+}
+
+a strong {
+  position: absolute;
+  margin-top: 70px;
+    margin-left: -60px;
+     color: white;
+     background: #100c0c;
+     padding: 5px;
+     text-align: center;
+     width: 145px;
+     font-size: 1.1em;
+     background-image: url("img/nav1.jpg");
+     background-size: cover;
+    /* transform: scale(0) rotate(60deg);*/
+     transition: all .5s;
+     opacity:0;
+     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, .5);
+     transform: translate(5%, -10px);
+}
+
+a:hover strong, a:focus strong {
+  transform: translate(5%, 0px);
+   opacity:1;  
+}
+
+.circles:nth-child(1) {
+  background-color: #2cbcc4;
+}
+.circles:nth-child(2) {
+  background-color: #bc040c;
+}
+.circles:nth-child(3) {
+  background-color: #9c3c94;
+}
+.circles:nth-child(4) {
+  background-color: #fcf404;
+}
+.circles:nth-child(5) {
+  background-color: #046cc4;
+}
+.circles:nth-child(6) {
+  background-color: #d4d4d4;
+}
+#spanwho {
+background-color: #0039A6;
+  border-radius: 10%;
+  border: 2px solid white;
+}
+.navcenter {
+  width: auto;
   margin: auto;
   justify-content: space-around;
   margin-top: 58px;
   background: #100c0c;
 }
-#navleft, #navright { 
-  background: #100c0c;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, .3);
-}
-.circles {
-  background: #bfd70e;
-    border-radius: 50%;
-    width: 62px;
-    height: 62px;  
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-}
-.circles i {
-  font-size: 1.2em;
-  text-align: center;
-  padding-left: 7px;
-}
-.circles span {
-  position: absolute;
-  top: 4px;
-  left: 12px;
-  font-size: 44px;
+  
+.navcenter a {
+  font-size: 40px;
+  background: #bc040c;
   color: white;
   font-weight: bolder;
+  margin: auto;
+  height: 70px;
+  display: flex;
+  
 }
-#navright .circles span {
-  position: absolute;
-  top: 4px;
-  left: 15px;
-  font-size: 44px;
-  color: white;
-  font-weight: bolder;
-
+.navcenter span {
+  padding: 5px;
+  margin: auto;
+  
 }
-.circles:nth-child(1) {
-  background-color: #9c3c94;
+.fa-arrow-up {
+  margin: 0;
+  padding: 5px;
 }
-.circles:nth-child(2) {
-  background-color: #f48424;
-}
-.circles:nth-child(3) {
-  background-color: #bc040c;
-}
-.circles:nth-child(4) {
-  background-color: #046cc4;
-}
-.circles:nth-child(5) {
-  background-color: #fcd41c;
-}
-.circles:nth-child(6) {
-  background-color: #049c54;
-}
-#spanwho {
-background-color: #0a0b89;
-  border-radius: 10%;
-  border: 2px solid white;
+#rotate {
+  transform: rotate(315deg)
 }
 
 /*-----------------------------DEFILEMENT---------------------------------*/
@@ -207,19 +271,21 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 
 
+main {  
+  background: url("img/subgrey.png");
+    background-size: contain;
+    background-repeat: repeat;      
+}
+
+/*-------------------------------------SECTION FULL STACK-----------------------------------*/
 
 
-/*-------------------------------------SECTION TECHNOLOGIES-----------------------------------*/
-
-
-#technologies {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
+#fullstack {
+  width: 80%;
   margin: auto;
-  font-size: 1em; 
   text-align: center;
-   font-size: 1.2em;
+  font-size: 1.2em;
+  margin-top: 50px;
 }
 #technologies span {
   font-size: 1.5em;
@@ -230,13 +296,100 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
   margin-right: 10px;
 }
 
+.unbreakable
+{
+   line-height: 1;
+    letter-spacing: -.07em;
+    color: black;
+}
+.ks
+{
+    font-size: 2.25em;
+    line-height: 1;
+    margin-top: -11px;
+    -webkit-transition: all .8s ease-in-out;
+            transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000) 8s;
+    -webkit-transform: translateX(-1000%);
+        -ms-transform: translateX(-1000%);
+            transform: translateX(-1000%);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #fc0;
+}
+
+.animate .ks
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+}
+
+.unbreakable span
+{
+    font-size: 2em;
+    text-transform: uppercase;
+    opacity: 0;
+    color: black;
+    filter: alpha(opacity=0);
+}
+
+.able
+{
+    -webkit-transition: all 3s cubic-bezier(.190, 1.000, .220, 1.000) 6s;
+            transition: all 3s cubic-bezier(.190, 1.000, .220, 1.000) 6s;
+    letter-spacing: -.07em;
+}
+
+.break
+{
+    -webkit-transition: all .8s ease-in-out 4s;
+            transition: all .8s ease-in-out 4s;
+    letter-spacing: -.07em;
+}
+
+.un
+{
+    -webkit-transition: all .5s ease-in-out 2.5s;
+            transition: all .5s ease-in-out 2.5s;
+    letter-spacing: -.07em;
+}
+
+.animate .un
+{
+    font-size: 2em;
+    -webkit-transform: scale(1.5,1.5);
+        -ms-transform: scale(1.5,1.5);
+            transform: scale(1.5,1.5);
+    opacity: 1;
+    
+}
+
+.animate .break
+{
+    font-size: 2.75em;
+    -webkit-transform: scale(1.5,1.5);
+        -ms-transform: scale(1.5,1.5);
+            transform: scale(1.5,1.5);
+    opacity: 1;
+    
+}
+
+.animate .able
+{
+    font-size: 3.25em;
+    -webkit-transform: scale(1.5,1.5);
+        -ms-transform: scale(1.5,1.5);
+            transform: scale(1.5,1.5);
+    opacity: 1;
+    
+}
 
 
 /*-------------------------------------SECTION TECHNOLIST-----------------------------------*/
 #technolist {
-  width: 90%;
+  width: 80%;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   margin: auto;
   font-size: 1em; 
   text-align: center;
@@ -249,9 +402,16 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 
 .carousel {
-  width: 100%;
+  width: 80%;
+  height: 400px;
   position: relative;
   box-sizing: border-box;
+  border-radius: 30px;
+  background: #100c0c;
+  box-shadow: inset 0px 0px 0px 6px white;
+   border: 6px solid #2cbcc4;
+    opacity: 0.8;
+    margin: auto;
 
 }
 
@@ -305,13 +465,15 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
   color: black;
 }
 .carousel-item i {
-  width: 100%;
+ 
   max-width: 800px;
   height: auto;
   box-sizing: border-box;
-  font-size: 12em;
+  font-size: 18em;
   text-align: center;
   margin-bottom: 15px;
+  margin-top: 15px;
+
 }
 
 
@@ -442,47 +604,203 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
   margin: auto;
   margin-bottom: 10px;
 }
-/*----------------------------NAV FOOTER-------------------------*/
-#navfooter span {
+
+/*-------------------------------NAV FOOTER-------------------------*/
+.to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
   font-size: 50px;
-  background: #bc040c;
-  color: white;
-  margin-bottom: 0;
-  font-weight: bolder;
-  margin-left: 2px;
-}
-
-#navfooter {
+  color: #100c0c;  
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 180px;
-  margin: auto;
-  justify-content: space-around;
-  
-  background: #100c0c;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
 }
-#navfooter i {
-  color: white;
-  font-size: 60px;
-  margin: auto;
+.to-top.active {
+  bottom: 50px;
+  pointer-events: auto;
+  opacity: 0.8;
 }
-
 /*-------------------------------FOOTER-------------------------*/
 footer {
+  position: relative;
+
+}
+#divcontact {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-image: url("img/backfooter.jpg");
+  background-size: contain;
+   border-top: 3px solid black; 
+}
+#adresse, #horaires {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+  width: 35%;
+
   
 }
-#contact {
-  
-  
-  background: red;
-  font-size: 5em;
+#horaires p:nth-child(2), #adresse p:nth-child(2) {
+  background-image: url("img/board1.jpg");
+  background-size: cover;
+  border: 5px solid #100c0c;
+  padding: 3px;
+  color: #fcfc04;
+  font-family: 'Press Start 2P', cursive;
+  width: 250px;
+  text-align: center;
+  font-size: 0.8em;
+line-height: 125%;
+    
 }
+
+
+
+#horaires p:nth-child(1), #horaires p:nth-child(3), #adresse p:nth-child(1), #adresse p:nth-child(3) {
+  font-size: 2em;
+
+}
+#horaires p, #adresse p {
+  margin: 0;
+  font-size: 0.75em;
+  max-height: 50px;
+}
+#horaires span, #adresse span {
+    animation-duration: 0.01s;
+       animation-name: textflicker;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+      
+}
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+    text-shadow: 0px 0px 15px #fcfc04;
+    opacity: 0.8;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+    opacity: 0.95;
+  }
+}
+
+
+/*-----------------------------DEFILEMENT FOOTER---------------------------------*/
+
+#defilfooter h1 {
+  margin: auto; 
+  padding: 12px;
+  color: #fcfc04;
+  font-family: 'Press Start 2P', cursive;
+    opacity: 0.75;
+    font-size: 20px;
+    vertical-align: middle;
+    text-shadow: 0px 0px 15px #fcfc04;
+    text-transform: uppercase;
+}
+#defilfooter {
+  width: 25%;
+  margin: auto;
+  height: 40px;
+  overflow: hidden;  /* masque tout ce qui dépasse */
+  box-shadow: /*5px 5px 2px 1px rgba(0, 0, 0, .5),*/ inset 0 0 1em .25em black;
+  background-image: url("img/board1.jpg");
+  background-size: cover;
+  border: 10px solid #100c0c;
+}
+/* le bloc défilant Le bloc défilant doit être un modèle de boîte en ligne n'autorisant 
+pas le renvoi à la ligne et être placé à droite du conteneur.
+L'animation proprement dite est définie en utilisant la propriété animation.*/
+#defilfooter > :first-child {
+  display: inline-block;             /* modèle de boîte en ligne */
+  padding-right: 2em;                   /* un peu d'espace pour la transition */
+  padding-left: 100%;                   /* placement à droite du conteneur */
+  white-space: nowrap;                  /* pas de passage à la ligne */
+  animation: defil 7s infinite linear;
+  animation-timing-function: cubic-bezier(0.15, 0.4, 0.5, 0.25);
+
+}
+@keyframes defil {
+  0% {
+    transform: translate3d(20px,0,0);      /* position initiale à droite */
+  }
+  100% {
+    transform: translate3d(-100%,0,0);  /* position finale à gauche */
+  }
+}
+
+/*-----------------------------FOOTER FIGURE---------------------------------*/
+#divfooter {
+  position: absolute;
+  width: 100%;
+  top: 160px; 
+  font-size: 4.5em;
+  display: flex;
+  justify-content: space-between;
+}
+#divfooterleft, #divfooterright {
+  display: flex;
+  justify-content: space-between; 
+  width: 23%;
+}
+#divfooterleft {
+  margin-left: 8.2%;
+  
+}
+#divfooterright {
+  margin-right: 8.3%;
+}
+#divfooter i {
+  
+    padding:0 1px 0 2px; 
+    text-shadow: -2.5px 0 #000, 0 2.5px #000, 2.5px 0 #000, 0 -2.5px #000; 
+    /*text-shadow: 5px 1px 10px rgba(0, 0, 0, .8);
+     /*animation: jump 2s infinite linear; */   
+    }
+    @keyframes jump {
+      0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      transform: translateX(0);}
+      25%  { 
+        transform: translateY(-2px);}
+        50% { 
+          transform: translateX(2px);}
+        75% {
+          transform: translateY(-2px);}
+        
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); 
+        transform: translateX(5px);}        
+  }
+
+#github {
+  color: black;
+}
+#linkedin {
+  color: #0e76a8;
+}
+#twitter {
+  color: #1DA1F2;
+}
+#slack {
+  color: #3F0F3F;
+}
+
+
+
+
 footer figure { 
   position: relative; 
   width: 100%;
   margin: 0;  
-  border-top: 7px solid black;
+   border-top: 3px solid black;
 }
 
 footer figure img {  
@@ -493,12 +811,11 @@ footer figure img {
   overflow: hidden;
     background: url("img/seatsbackokok.jpg");
     background-size: cover;
-    animation: compta_animation 25s linear infinite;
+    animation: compta_animation 20s linear infinite;
 }
 
 @keyframes compta_animation {
+  0%  {background-position: -2122px 0;} 
+  100%  {background-position: 0 0;}
   
-  0%  {background-position: 0 0;}
-  100%  {background-position: -2122px 0;} 
-
 }
