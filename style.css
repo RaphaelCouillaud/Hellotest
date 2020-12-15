@@ -161,7 +161,7 @@ a:hover strong, a:focus strong {
 	background-color: #bc040c;
 }
 .circles:nth-child(3) {
-	background-color: #9c3c94;
+	background-color: #b4b4b4;
 }
 .circles:nth-child(4) {
 	background-color: #fcf404;
@@ -298,9 +298,11 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 /*-------------------------------SECTION ----------------------------------*/
 
 main {	
-	background: url("img/subgrey.png");
-    background-size: contain;
-    background-repeat: repeat;	    
+	background: url("img/subsubyellow.png");
+    background-size: 113%;
+    background-repeat: repeat;
+    background-position: center center;
+
 }
 #creationweb, #devweb, #graphisme, #optimisation, #webmastering {
 	display: flex;
@@ -347,9 +349,10 @@ main {
 	margin-bottom: 50px;  	
 }
 #creationweb, #optimisation, #webmastering, #devweb, #graphisme {
-	color: #d4d4d4;
+	color: white;
 	background: #100c0c;
-	opacity: 0.8;
+	opacity: 0.9;
+	 text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 
 }
  
@@ -486,7 +489,7 @@ main {
   flex-direction: column;
   justify-content: space-around;
   background: #100c0c;
-	opacity: 0.8;
+	opacity: 0.9;
 	padding-top: 50px;
 	 box-shadow: inset 0px 0px 0px 6px white;
    border: 6px solid black;
@@ -503,6 +506,7 @@ main {
    font-size: 2em; 
    margin: auto;
    padding: 12px 0 12px 0;
+    text-shadow: -1px 0 1px white, 0 1px 1px white, 1px 0 1px white, 0 -1px 15px white;
   
 
 }
@@ -529,7 +533,7 @@ main {
    opacity: 1;
     margin: auto;
     margin-top: 25px;
-    
+    text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
     font-size: 1em;
 }
 #devcontenu p {
@@ -553,6 +557,7 @@ main {
    border: 6px solid #fcfc04;
    opacity: 1;
    display: flex;
+   text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 7px white;
 
 }
 #london {
@@ -634,6 +639,7 @@ main {
   flex-direction: column;
   align-items: center; 
    margin-top: 50px;
+   text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 #formulaire h2 {
 	background-color: #fcfc04;
@@ -645,6 +651,7 @@ main {
    font-size: 2em; 
    margin: auto;
    padding: 12px 0 12px 0;
+  
 }
 #formulaire button {
   background-color: #bc040c;
@@ -664,6 +671,8 @@ main {
    border: 5px solid black;
    margin-bottom: 120px;
 }
+
+
 form {
 	 margin-top: 25px;
 }
@@ -705,7 +714,7 @@ input:focus, textarea:focus {
   margin: auto;
   width: 70%; 
   background: #100c0c;
-	opacity: 0.8;
+	opacity: 0.9;
 	padding-top: 50px;
 	 box-shadow: inset 0px 0px 0px 6px white;
    border: 6px solid black;
@@ -734,7 +743,7 @@ input:focus, textarea:focus {
 .to-top.active {
 	bottom: 50px;
 	pointer-events: auto;
-	opacity: 0.8;
+	opacity: 0.9;
 }
 
 

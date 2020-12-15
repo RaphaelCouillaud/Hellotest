@@ -126,7 +126,7 @@ nav i {
 }
 #spanwho span {
   top: -5px;
-  left: 12px;
+  left: 10px;
   font-size: 2.85em;
   margin-top: 2px;  
 
@@ -166,7 +166,7 @@ a:hover strong, a:focus strong {
   background-color: #2cbcc4;
 }
 .circles:nth-child(3) {
-  background-color: #9c3c94;
+  background-color: #b4b4b4;
 }
 .circles:nth-child(4) {
   background-color: #049c54;
@@ -216,26 +216,27 @@ background-color: #0039A6;
 /*-----------------------------DEFILEMENT---------------------------------*/
 
 h1 {
-	margin: auto;	
-	padding: 12px;
-	color: #fcfc04;
-	font-family: 'Press Start 2P', cursive;
-  	opacity: 0.75;
-  	font-size: 26px;
-  	vertical-align: middle;
+  margin: auto; 
+  padding: 12px;
+  color: #fcfc04;
+  font-family: 'Press Start 2P', cursive;
+    opacity: 0.85;
+    font-size: 26px;
+    vertical-align: middle;
+    text-shadow: 0px 0px 15px #fcfc04;
 }
 .defilement {
-	display: flex; 
-	flex-direction: row;
-	position: sticky;
+  display: flex; 
+  flex-direction: row;
+  position: sticky;
 
 }
 .defilement i {
-	margin-top: 50px;
-	font-size: 6em;
-	margin-left: -2px;
-	margin-right: -2px;
-	text-shadow: 1px 10px 4px rgba(0, 0, 0, .5);
+  margin-top: 50px;
+  font-size: 6em;
+  margin-left: -2px;
+  margin-right: -2px;
+  text-shadow: 1px 10px 4px rgba(0, 0, 0, .5);
 
 }
 /* le block conteneur */
@@ -272,7 +273,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 
 main {  
-  background: url("img/subgrey.png");
+  background: url("img/subsubred.png");
     background-size: contain;
     background-repeat: repeat;  
 }
@@ -296,11 +297,15 @@ main {
   margin-right: 10px;
 }
 
+.unbreakable-container {
+   opacity: 0.9;
+}
 .unbreakable
 {
    line-height: 1;
     letter-spacing: -.07em;
     color: black;
+    font-weight: bolder;
 }
 .ks
 {
@@ -315,7 +320,7 @@ main {
     letter-spacing: -1px;
     text-transform: uppercase;
     color: #bc040c;
-     text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 10px black;
+
 }
 
 .animate .ks
@@ -404,14 +409,14 @@ main {
 
 .carousel {
   width: 80%;
-  height: 420px;
+  height: 475px;
   position: relative;
   box-sizing: border-box;
   border-radius: 30px;
-  background: #100c0c;
+  background: #bc040c;
   box-shadow: inset 0px 0px 0px 6px white;
-   border: 6px solid #bc040c;
-    opacity: 0.8;
+   border: 6px solid #100c0c;
+    opacity: 0.9;
     margin: auto;
 
 }
@@ -471,7 +476,7 @@ main {
   font-size: 17em;
   text-align: center;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 60px;
   text-shadow: -3px 0 6px white, 0 3px 6px white, 3px 0 6px white, 0 -3px 40px white;
   color: white;
 }
@@ -498,8 +503,8 @@ main {
 
 .carousel-actions button {
   font-size: 50px;
-   background: #100c0c;
-    opacity: 0.8;
+   background: #bc040c;
+    opacity: 0.9;
   color: white;
   transition: all 0.5s;
   border: none;
@@ -507,14 +512,14 @@ main {
 }
 
 .carousel-actions button:hover {
-  color: #bc040c;
+  color: #100c0c;
 }
 
 .carousel-actions #carousel-slide-nav {
   align-self: flex-end;
   box-sizing: border-box;
   padding-bottom: 15px;
-  opacity: 0.8;
+  opacity: 0.9;
 
 }
 
@@ -545,7 +550,7 @@ main {
 }
 
 .carousel-actions #carousel-slide-nav span:hover {
-  background: #bc040c;
+  background: #100c0c;
   box-sizing: border-box;
 }
 
@@ -588,8 +593,9 @@ main {
    border: 6px solid #bc040c;
    color: white;
    background: #100c0c;
-    opacity: 0.8;
+    opacity: 0.9;
     margin-bottom: 25px;
+    text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 .listeprojets:nth-child(even) {
   flex-direction: row-reverse;
@@ -617,6 +623,7 @@ main {
 .listeprojets video {
   margin: auto;
   padding-bottom: 25px;
+
 }
 .listeprojets h3, .listeprojets h4 {
  text-shadow: -1px 0 1px white, 0 1px 1px white, 1px 0 1px white, 0 -1px 10px white;

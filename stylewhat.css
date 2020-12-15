@@ -164,7 +164,7 @@ a:hover strong, a:focus strong {
   background-color: #bc040c;
 }
 .circles:nth-child(3) {
-  background-color: #9c3c94;
+  background-color: #b4b4b4;
 }
 .circles:nth-child(4) {
   background-color: #fcf404;
@@ -173,7 +173,7 @@ a:hover strong, a:focus strong {
   background-color: #046cc4;
 }
 .circles:nth-child(6) {
-  background-color: #d4d4d4;
+  background-color: #9c3c94;
 }
 .circles:nth-child(7) {
   background-color: #049c54;
@@ -277,7 +277,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 /*-------------------------------------SECTION SITE-----------------------------------*/
 main {  
-  background: url("img/subgreycopie.png");
+  background: url("img/subsubblue.png");
     background-size: contain;
     background-repeat: repeat;      
 }
@@ -285,6 +285,7 @@ main {
 	display: flex;
 	flex-direction: column;
   margin-top: 50px;
+  text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 #nouveausite {
   width: 90%;
@@ -304,7 +305,7 @@ main {
   margin: auto;
   width: 70%;
   background: #100c0c;
-  opacity: 0.8;
+  opacity: 0.9;
   padding-top: 50px;
    box-shadow: inset 0px 0px 0px 6px white;
    border: 6px solid black;
@@ -395,6 +396,7 @@ main {
 .todocontainer ul li div p:nth-child(1) {
   font-size: 2.5em;
   padding-top: 10px;
+   text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 .todocontainer ul li{
   list-style-type:none;
@@ -403,7 +405,7 @@ main {
   margin: auto;
   padding-top: 50px;
   background: #2cbcc4;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 30px;
   
 }
@@ -428,13 +430,14 @@ main {
   bottom: 0;
   width: 350px;
   padding: 0 15px 0 15px;  
-  background: white;
+  background: #2cbcc4;
   visibility: hidden;
   opacity: 0;
   transition: all 0.7s ease-in-out;
  border-radius: 30px;
- box-shadow: inset 0px 0px 0px 6px #2cbcc4;
+ box-shadow: inset 0px 0px 0px 6px white;
   border: 6px solid #100c0c;
+
 }
 .todocontainer ul li div::before {
   content: '';
@@ -479,6 +482,7 @@ main {
 /*-------------------------------------SECTION REFONTE-----------------------------------*/
 #refonte .todocontainer p {
 	color: white;
+  text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 #refonte .todocontainer ul li{
   background: #100c0c;
@@ -691,6 +695,7 @@ canvas {
   margin-top: 50px;
   position: relative;
   margin-bottom: 100px;
+   text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 #divsecu {
   position: absolute;
@@ -837,12 +842,14 @@ tbody tr:nth-child(odd):hover {
   transform: scale(1.02);
   transition: left 0.1s, transform 0.1s;
   white-space: nowrap;
+  text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 tbody tr:nth-child(even):hover {
   background-color: #2cbcc4;
   transform: scale(1.02);
   transition: left 0.1s, transform 0.1s;
   white-space: nowrap;
+  text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
 tbody td i {
   font-size: 1.25em;
