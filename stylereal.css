@@ -567,37 +567,65 @@ main {
 #projets {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 100px auto;
   font-size: 1em; 
   text-align: center;
    font-size: 1.2em;
    margin-top: 50px;
    margin-bottom: 50px;
    justify-content: space-between;
-
+   width: 90%;
+   height: 1025px;
 }
 .listeprojets {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  vertical-align: middle;
-  display: flex;
-  margin: auto;
+  height: 75px;
+  margin: 10px;
+  flex-grow: 1;
+    transition: flex-grow 0.4s ease-out;
+    position: relative;
+    overflow: hidden;
    border-radius: 30px;
   background: #100c0c;
   box-shadow: inset 0px 0px 0px 6px white;
    border: 6px solid #bc040c;
    color: white;
-   background: #100c0c;
     opacity: 0.9;
-    margin-bottom: 25px;
+   
     text-shadow: -0.5px 0 0.5px white, 0 0.5px 0.5px white, 0.5px 0 0.5px white, 0 -0.5px 10px white;
 }
-.listeprojets:nth-child(even) {
+.active {
+    flex-grow: 10000;
+}
+.listeprojets * {
+  pointer-events: none;
+}
+.listeprojetstop {
+  height: 75px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+.listeprojetstop h3 {
+  font-size: 1.75em;
+}
+.listeprojetsbottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+
+
+
+.listeprojetsbottom:nth-child(odd) {
   flex-direction: row-reverse;
 }
 .listeprojets1, .listeprojets2, .listeprojets3, .listeprojets4 {
@@ -606,16 +634,16 @@ main {
 
 }
 
-.listeprojets1 {
+.listeprojets4 {
   width: 35%;
    flex-direction: column;
 
 }
-.listeprojets2 {
+.listeprojets1 {
   width: 25%;
   margin: 0 15px 0 15px;
 } 
-.listeprojets3, .listeprojets4 {
+.listeprojets3, .listeprojets2 {
   width: 20%;
   margin: 0 15px 0 15px;
 } 
@@ -634,17 +662,20 @@ main {
 .listeprojets a {
  text-shadow: -1px 0 1px white, 0 1px 1px white, 1px 0 1px white, 0 -1px 10px white;
  color: #bc040c;
+ pointer-events: auto!important;
 }
 .listeprojets1 h3 i {
   font-size: 1.1em;
   margin-left: 10px;
 
 }
-.listeprojets3 i {
-  font-size: 1.85em;
-  margin-bottom: 3px;
+.listeprojetstop i {
+  font-size: 1.25em;
+  
 }
-
+video {
+ pointer-events: auto!important;
+}
 
 /*-------------------------------NAV FOOTER-------------------------*/
 .to-top {

@@ -76,7 +76,38 @@ window.onload = function() {
 
 
 
+const allBlocs = document.querySelectorAll('.listeprojets');
 
 
+allBlocs.forEach(listeprojets => {
+    listeprojets.addEventListener('click', (e) => {
+
+        // console.log(e.target);
+        e.target.classList.add('active');
+
+        for(let i = 0; i < allBlocs.length; i++ ){
+            if(allBlocs[i] !== e.target){
+                allBlocs[i].classList.remove('active');
+            }
+        }
+        
+
+    })
+})
+
+const buttons = document.querySelectorAll('a');
+
+buttons.forEach(a => {
+    a.addEventListener('click', (e) => {
+        e.stopPropagation();
+    })
+})
+const vid = document.querySelectorAll('video');
+
+vid.forEach(video => {
+    video.addEventListener('click', (e) => {
+        e.stopPropagation();
+    })
+})
 
 
