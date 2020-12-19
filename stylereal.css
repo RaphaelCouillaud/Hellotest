@@ -649,8 +649,11 @@ main {
 } 
 
 .listeprojets video {
-  margin: auto;
-  padding-bottom: 25px;
+ margin: auto;
+margin-top: 0;
+  height: 211px;
+  pointer-events: auto!important;
+ width: 375px;
 
 }
 .listeprojets h3, .listeprojets h4 {
@@ -664,19 +667,40 @@ main {
  color: #bc040c;
  pointer-events: auto!important;
 }
-.listeprojets1 h3 i {
-  font-size: 1.1em;
-  margin-left: 10px;
-
+.listeprojetstop h3 i {
+  padding: 0 2px 0 2px;
+  font-size: 0.85em;
+}
+.listeprojets4 img {
+  width: 375px;
+  height: 211px;
+  margin: auto;
+  margin-top: 0;
 }
 .listeprojetstop i {
   font-size: 1.25em;
-  
 }
-video {
- pointer-events: auto!important;
+.listeprojetstop p {
+  font-size: 1.75em;
 }
-
+#thethrill {
+  font-family: 'KoHo', sans-serif; 
+}
+#groupomania {
+  font-family: 
+}
+#sopekocko {
+  font-family: 'Mali', cursive; 
+}
+#burnout {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#orinoco {
+  font-family: 'Finger Paint', cursive;
+}
+#jack {
+  font-family: 'Electrolize', sans-serif;
+}
 /*-------------------------------NAV FOOTER-------------------------*/
 .to-top {
   position: fixed;
