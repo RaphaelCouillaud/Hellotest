@@ -298,7 +298,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 /*-------------------------------SECTION ----------------------------------*/
 
 main {	
-	background: url("img/subsubyellow.png");
+	background: url("img/subgrey.png");
     background-size: 113%;
     background-repeat: repeat;
     background-position: center center;
@@ -506,7 +506,7 @@ main {
    font-size: 2em; 
    margin: auto;
    padding: 12px 0 12px 0;
-    text-shadow: -1px 0 1px white, 0 1px 1px white, 1px 0 1px white, 0 -1px 15px white;
+    text-shadow: -1px 0 1px white, 0 1px 1px white, 1px 0 1px white, 0 -1px 10px white;
   
 
 }
@@ -943,3 +943,10 @@ footer figure img {
   
 }
 
+#sound {
+	position: absolute;
+	bottom: 100px;
+	right: 0px;
+	border: none;
+	
+}

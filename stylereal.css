@@ -273,7 +273,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 
 main {  
-  background: url("img/subsubred.png");
+  background: url("img/subgrey.png");
     background-size: contain;
     background-repeat: repeat;  
 }

@@ -44,7 +44,7 @@ for (let i = 0; i < col; i++) arr[i] = 1;
 function draw() {
   $.fillStyle = "rgba(0,0,0,.05)";
   $.fillRect(0, 0, W, H);
-  $.fillStyle = "#0f0";
+  $.fillStyle = "#2cbcc4";
   $.font = font + "px system-ui";
   for (let i = 0; i < arr.length; i++) {
     let txt = matrix[Math.floor(Math.random() * matrix.length)];

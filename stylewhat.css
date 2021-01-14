@@ -277,7 +277,7 @@ L'animation proprement dite est définie en utilisant la propriété animation.*
 
 /*-------------------------------------SECTION SITE-----------------------------------*/
 main {  
-  background: url("img/subsubblue.png");
+  background: url("img/subgrey.png");
     background-size: contain;
     background-repeat: repeat;      
 }
@@ -685,6 +685,7 @@ canvas {
   box-shadow: inset 0px 0px 0px 6px white;
   padding: 12px;
   height: 750px;
+  
 
 }
 #securisation {
